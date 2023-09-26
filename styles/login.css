@@ -1,25 +1,34 @@
 body {
-    background: rgba(245, 244, 249, 1);
-    align-items: center;
+  background: rgba(245, 244, 249, 1);
+  margin: 0;
+  padding: 0;
+
 }
 
 .img-inicio {
-    position: fixed;
-    width: 200px;
-    height: 150px;
-    background: rgba(245, 244, 249, 1);
+
+  background-image: rgba(245, 244, 249, 1);
+}
+
+.img-inicio img {
+  width: 100%;
+  top: 0;
+  left: 0;
+
+
+
 }
 
 
-
 .form {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    background: white;
-    border: 1px solid #999;
-    display: flex;
+
+  top: 0;
+  right: 0;
+  height: 100%;
+
+  background: white;
+  border: 1px solid #999;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -30,32 +39,31 @@ body {
 
 .btn {
 
-    height: 31px;
-    width: 256px;
-    background: rgb(39, 211, 39);
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
+  display: block;
+  /* Garante que os elementos dentro da div sejam empilhados verticalmente */
+  margin-top: 10px;
+  /* Espaçamento entre os botões */
+  height: 31px;
+  width: 256px;
+  background: rgb(39, 211, 39);
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.itens{
-    
-    align-items: center;
-    flex-direction: column;
-    display: flex;
-    margin-bottom: 10px; /* Espaçamento entre os elementos */
-    padding: 5px;
+/* css-especifico */
+
+.d-flex {
+  display: flex;
 }
-.campo-email{
-    display: flex;
-    justify-content: center;
-}
-.Senha{
-    display: flex;
-    justify-content: center;
-}
-.material-symbols-outlined{
-    width: 100px;
+
+.conteiner {
+  display: flex;
+  justify-content: space-between;
 }
