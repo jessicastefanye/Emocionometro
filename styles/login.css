@@ -1,69 +1,112 @@
+
 body {
-  background: rgba(245, 244, 249, 1);
   margin: 0;
   padding: 0;
-
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.img-inicio {
-
-  background-image: rgba(245, 244, 249, 1);
+.sidebar {
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(187, 192, 205, 0.4);
+  padding: 20px;
 }
 
-.img-inicio img {
+.image {
+  text-align: center;
+}
+
+
+.login-text {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.input-box {
+  border: 1px solid rgba(0, 194, 71, 1);
+  border-radius: 150px;
+  margin-top: 20px;
+  text-align: center;
   width: 100%;
-  top: 0;
-  left: 0;
-
-
-
+  height: 30px;
 }
+  
 
-
-.form {
-
-  top: 0;
-  right: 0;
-  height: 100%;
-
-  background: white;
-  border: 1px solid #999;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-
-}
-
-
-.btn {
-
-  display: block;
-  /* Garante que os elementos dentro da div sejam empilhados verticalmente */
-  margin-top: 10px;
-  /* Espaçamento entre os botões */
-  height: 31px;
-  width: 256px;
-  background: rgb(39, 211, 39);
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-/* css-especifico */
-
-.d-flex {
-  display: flex;
-}
-
-.conteiner {
+.remember-me {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button.button {
+  
+  background-color: rgba(0, 194, 71, 1);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  height: 30px;
+  width: 252px;
+}
+h2{
+  font-size: 30px;
+  height:67.2px;
+}
+
+.or-text {
+  font-weight: bold;
+  margin: 10px 0;
+  color:  rgba(97, 97, 97, 1);;
+}
+.form h2 {
+  font-weight: bold;
+  margin-bottom: 64px;
+}
+.form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(187, 192, 205, 0.4);
+  border-radius: 10px;
+  height: 100%;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-content: flex-end;
+  align-items: flex-end;
+
+}
+.conteiner-input{
+  position: relative;
+
+}
+.label-login{
+  
+  position: absolute;
+  font-size: 12px;
+  top: 13px;
+  left: 20px;
+  background-color: white;
 }

@@ -1,62 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/login.css" />
+    
     <title>Login</title>
   </head>
 
   <body>
-    <div class="conteiner">
-      <div class="img-inicio">
-        <img src="./img/login.jpeg" />
+    <div class="container">
+      <div class="image">
+        <img src="./img/login.jpeg" alt="Imagem à esquerda" />
       </div>
 
-      <div id="login" class="form">
-        <div class="itens">
-          <img src="./img/login2.png" />
-          <strong>Faça Seu Login</strong>
-          <form>
-            
-            <div class="campo-email">
-              <label for="email">Email:</label>
-              <div>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="seuemail@example.com"
-                />
-              </div>
-            </div>
-
-            <div class="Senha">
-              <label for="senha">Senha:</label>
-              <input
-                type="password"
-                id="senha"
-                name="senha"
-                class="password-input"
-                required
-              />
-
-            </div>
-            <div>
-              <label class="remember-me">
-                <input type="checkbox" id="lembrar" name="lembrar" /> Lembrar-me
-              </label>
-              <span id="esqueceuSenha">Esqueci minha senha</span>
-            </div>
-            <div>
-              <button type="submit">Entrar</button>
-            </div>
-            <strong>Ou Então</strong>
-            <div>
-              <button type="">Cadastre-se</button>
-            </div>
-          </form>
+      <div class="form">
+        <div class="image">
+          <img src="./img/login2.png" alt="Imagem de perfil" />
         </div>
+        <h2>Faça seu login</h2>
+        <form>
+          <div class="login-text"></div>
+          <div  class="conteiner-input">
+            <label for="email" class="label-login">Email</label>
+            <input class="input-box" type="text" placeholder="Digite seu email" />
+          </div>
+          <div class="conteiner-input" >
+            <label for="password" class="label-login">Senha</label>
+            <input class="input-box" type="password" placeholder="Digite sua senha" />
+          </div>
+          <div class="remember-me">
+            <div><input type="checkbox" id="lembrar" /> Lembre-me</div>
+            <div>
+              <a href="#">Esqueci minha senha</a>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="button" id="open">Entrar</button>
+            <div class="or-text">---Ou então---</div>
+            <button class="button">Cadastrar</button>
+          </div>
+         
+        </form>
       </div>
     </div>
   </body>
