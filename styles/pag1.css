@@ -1,0 +1,52 @@
+.body{
+    left: 0;
+    top: 0;
+    background: #b1b1ae;
+}
+
+
+
+.parte-superior {
+    display: flex;
+    border: 1px;
+    Width: 100%;
+    Height: 68px;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+}
+
+.imagem1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+.linha,
+.linhas {
+    display: flex;
+
+
+}
+
+.linha {
+    width: 270px;
+}
+
+.conteiner-lateral {
+    display: flex;
+    background: #F9E423;
+    
+    flex-direction: column; /* Coloca os itens em uma coluna vertical */
+    height: 87vh; 
+    width: 222px;
+}
+
+.itens {
+    flex: 1;
+    /* Faz o conteúdo ocupar o espaço restante no contêiner */
+    padding: 20px;
+    /* Espaçamento interno para o conteúdo */
+}
