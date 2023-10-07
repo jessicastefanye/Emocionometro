@@ -70,6 +70,32 @@
 .lista-de-professores {
     margin-top: 20px;
 } */
+.parte-superior {
+    display: flex;
+    border: 1px;
+    Width: 100%;
+    Height: 68px;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+}
+.imagem1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+.linhas {
+    display: flex;
+
+
+}
+
+.linha {
+    width: 270px;
+}
 *,p{
     margin: 0;
     padding: 0;
@@ -99,13 +125,14 @@ menu{
     align-items: center;
 }
 .btnstatic-purple{
-    background: #564696;
+    background: #FAA61A;
     font-weight: 600;
 }
 .btn-menu:hover{
     cursor: pointer;
     font-weight: 600;
-    background: #564696;
+    background: 
+    #F48221;
 }
 .btn-menu img, .btnstatic img{
     margin: 0 17px 0 24px;
@@ -118,7 +145,7 @@ menu{
 }
 .box-purple{
     width: 274px;
-    background: #482D83;
+    background: #F9E423;
     height: 100vh;
 }
 
@@ -169,16 +196,12 @@ h4,.main-content{
     margin: 32px;
 }
 /* main-content onde vai os dados novos exibidos na tela */
-.main-content{
-    background: white;
-    max-width:100%;
-    max-height: 100vh;
-    border-radius: 24px;
-    padding: 20px 20px 50px 20px;
-    box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);;
-    -moz-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
-}
+
+    .main-content {
+        background: #c7c5c5;
+        padding: 20px 20px 50px 20px;
+        -moz-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
+    }
 
 #formulario {
     display: flex;
@@ -249,8 +272,7 @@ h4,.main-content{
 }
 
 .info-purple{
-    color: white;
-    background:#482D83;
+   
     height: 72px;
     padding: 24px 40px;
     max-width: 100%;

@@ -63,42 +63,44 @@
 </head>
 
 <body>
+    <div class="parte-superior">
+        <img class="imagem1" src="../img/login2.png" alt="img" />
+        <img class="pessoa" src="../svg/pessoa.svg" alt="pessoa" />Jessica
+        Stefanye
+    </div>
+    <div class="linhas">
+        <img class="linha" src="../svg/linha.svg" alt="" />
+        <img class="linha" src="../svg/linha2.svg" alt="" />
+        <img class="linha" src="../svg/linha3.svg" alt="" />
+        <img class="linha" src="../svg/linha4.svg" alt="" />
+        <img class="linha" src="../svg/linha5.svg" alt="" />
+    </div>
+    
     <div class="box-content">
 
         <div class="box-purple">
-            <img class="logo" src="../../svg/logo.svg" alt="">
+       
             <menu>
-                <button id="mentores" class="btnstatic dflex">
-                    <img src="../../svg/mentores.svg" alt="">
-                    <p>Mentores</p>
+                <button id="professores" class="btnstatic dflex">
+                    <img src="../svg/inicio.svg" alt="">
+                    <p>Inicio</p>
                 </button>
-                <button onclick="mentorias()" class="btn-menu dflex">
-                    <img src="../../svg/Mentoria.svg" alt="">
-                    <p>Mentorias</p>
+                <button onclick="Usuarios()" class="btn-menu dflex">
+                    <img src="../svg/usuario.svg" alt="">
+                    <p>Usuarios</p>
                 </button>
-                <button onclick="turmas()" class="btn-menu dflex">
-                    <img src="../../svg/turmas.svg" alt="">
-                    <p>Turmas</p>
+                <button onclick="emocionometro()" class="btn-menu dflex">
+                    <img src="../svg/coraçao.svg" alt="">
+                    <p>Emocionometro</p>
                 </button>
-                <button onclick="alunos()" class="btn-menu dflex">
-                    <img src="../../svg/alunos.svg" alt="">
-                    Alunos
-                </button>
+                
             </menu>
         </div>
 
         <div class="box-silver">
-            <header class="white">
-                <div class="sub-white">
-                    <img class="svg-user" src="../../svg/user.svg" alt="">
-                    <div class="p-user">
-                        <p>Usuário</p>
-                        <p>desenvolvedor@gmail.com</p>
-                    </div>
-                </div>
-            </header>
+         
 
-            <h4>Mentores</h4>
+            <h4>Usuários > professor</h4>
 
             <div>
                 <main class="main-content">
@@ -109,9 +111,9 @@
                             <img src="../../svg/search.svg" alt="lupa" id="lupa" >
                         </div>
 
-                        <button onclick="novoMentor()" class="btn-green dflex" type="button">
+                        <button onclick="novoUsuario()" class="btn-green dflex" type="button">
                             <img src="../../svg/adicionar.svg" alt="">
-                            Nova Mentor
+                            + Novo Usuário
                         </button>
                     </div>
                     <div class="box-info">
@@ -123,18 +125,24 @@
                                 </div>
                             </div>
                             <div class=" width100">
-                                <p class="info-purple">E-mail</p>
+                                <p class="info-purple">Disciplina</p>
                                 <div id="info-content2">
                                     <!-- <p class="info-white">Juliana@gmaiil.com</p> -->
                                 </div>
                             </div>
                             <div class="center-text">
-                                <p class="info-purple border-radius-purple-reght">Ações</p>
+                                <p class="info-purple border-radius-purple-reght">Perfil</p>
                                 <div id="info-content3">
-                                    <!-- <div class="info-white dflex ">
+                                    <div class="center-text">
+                                        <p class="info-purple border-radius-purple-reght">Ativo</p>
+                                        <div id="info-content4">
+                                            <div class="center-text">
+                                                <p class="info-purple border-radius-purple-reght">Açoes</p>
+                                                <div id="info-content5">
+                                    <div class="info-white dflex ">
                                         <img onclick="editarMentor()" src="../../svg/editar.svg" alt="">
                                         <img src="../../svg/delete.svg" alt="">
-                                    </div> -->
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -1,5 +1,5 @@
 //função para exibir conteudo na tela formatado
-const rendermentor = (mentores) =>{
+const rendermentor = (professores) =>{
     const info_content_1 = document.getElementById('info-content1')
     const info_content_2 = document.getElementById('info-content2')
     const info_content_3 = document.getElementById('info-content3')
@@ -9,7 +9,7 @@ const rendermentor = (mentores) =>{
       info_content_2.innerHTML = ''
       info_content_3.innerHTML = ''
     
-    mentores.forEach(mentores => {
+    professores.forEach(professores => {
         contador++;
         let corlist = '';
         if (contador % 2 === 0) {
@@ -19,22 +19,22 @@ const rendermentor = (mentores) =>{
         }
     
         info_content_1.innerHTML += `
-          <p class="info-white ${corlist}">${mentores.mentor}</p>
+          <p class="info-white ${corlist}">${professores.mentor}</p>
         `;
         info_content_2.innerHTML += `
-          <p class="info-white ${corlist}">${mentores.email}</p>
+          <p class="info-white ${corlist}">${professores.email}</p>
         `;
         info_content_3.innerHTML += `
           <div class="info-white dflex ${corlist}">
-            <img onclick="editarMentor(${mentores.id})" src="../../svg/editar.svg" alt="">
-            <img onclick="deletarMentor(${mentores.id})" src="../../svg/delete.svg" alt="">
+            <img onclick="editarMentor(${professores.id})" src="../../svg/editar.svg" alt="">
+            <img onclick="deletarMentor(${professores.id})" src="../../svg/delete.svg" alt="">
           </div>
         `;
       });
     }
     
     const btnPurpleMenu = () => {
-      const purpleBTN =document.getElementById('mentores')
+      const purpleBTN =document.getElementById('professores')
         purpleBTN.classList.toggle("btnstatic-purple")
     }
     btnPurpleMenu()
@@ -48,10 +48,10 @@ const rendermentor = (mentores) =>{
         pesquisa = `?q=${textoPesquisa}`
       }
     
-        const retorno = await fetch (`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores${pesquisa}`)
-        const mentores = await retorno.json()
+        const retorno = await fetch (`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/professores${pesquisa}`)
+        const professores = await retorno.json()
     
-        rendermentor(mentores)
+        rendermentor(professores)
     }
     getmentores()
     
@@ -72,11 +72,11 @@ const rendermentor = (mentores) =>{
     
     //vai a pag editarMentor
     const editarMentor = (id)=> {
-        window.location = `/html/mentores/editarMentor.html?id=${id}`
+        window.location = `/html/professores/editarMentor.html?id=${id}`
     }
     
     const deletarMentor = async (id) => {
-       await  fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/mentores/${id}`, {
+       await  fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/professores/${id}`, {
             method: 'DELETE'
         })
         getmentores()
@@ -84,18 +84,18 @@ const rendermentor = (mentores) =>{
     
     
     //vai para pagina mentoias
-    const mentorias = () => {
-       window.location = "/html/mentorias/mentorias.html"
+    const Usuarios = () => {
+       window.location = "/html/Usuarios/Usuarios.html"
      }
-    //vai para pagina turmas
-    const turmas = () => {
-       window.location = "/html/turmas/turmas.html"
+    //vai para pagina emocionometro
+    const emocionometro = () => {
+       window.location = "/html/emocionometro/emocionometro.html"
     }
     //vai para pagina alunos
     const alunos = () => {
        window.location = "/html/alunos/alunos.html"
     }
-    //retorna a pag novoMentor
-    const novoMentor = () => {
-      window.location = "/html/mentores/novoMentor.html"
+    //retorna a pag novoUsuario
+    const novoUsuario = () => {
+      window.location = "/html/professores/novoUsuario.html"
     }
