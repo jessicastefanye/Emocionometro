@@ -1,7 +1,7 @@
 .body{
+    display: flex;
     left: 0;
     top: 0;
-    background: #b1b1ae;
 }
 
 
@@ -24,7 +24,7 @@
 
 }
 
-.linha,
+
 .linhas {
     display: flex;
 
@@ -35,18 +35,24 @@
     width: 270px;
 }
 
+
+
 .conteiner-lateral {
     display: flex;
     background: #F9E423;
     
-    flex-direction: column; /* Coloca os itens em uma coluna vertical */
+    flex-direction: column; 
     height: 87vh; 
     width: 222px;
 }
 
 .itens {
     flex: 1;
-    /* Faz o conteúdo ocupar o espaço restante no contêiner */
+  
     padding: 20px;
-    /* Espaçamento interno para o conteúdo */
+   
+}
+.palavra-centralizada{
+    display: flex;
+    
 }
