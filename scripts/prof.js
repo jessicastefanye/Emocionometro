@@ -26,7 +26,7 @@ const rendermentor = (professores) =>{
         `;
         info_content_3.innerHTML += `
           <div class="info-white dflex ${corlist}">
-            <img onclick="editarMentor(${professores.id})" src="../../svg/editar.svg" alt="">
+            <img onclick="editarPtofessor(${professores.id})" src="../../svg/editar.svg" alt="">
             <img onclick="deletarMentor(${professores.id})" src="../../svg/delete.svg" alt="">
           </div>
         `;
@@ -70,9 +70,9 @@ const rendermentor = (professores) =>{
     
     
     
-    //vai a pag editarMentor
-    const editarMentor = (id)=> {
-        window.location = `/html/professores/editarMentor.html?id=${id}`
+    //vai a pag editarPtofessor
+    const editarPtofessor = (id)=> {
+        window.location = `/html/professores/editarPtofessor.html?id=${id}`
     }
     
     const deletarMentor = async (id) => {
@@ -99,3 +99,28 @@ const rendermentor = (professores) =>{
     const novoUsuario = () => {
       window.location = "/html/professores/novoUsuario.html"
     }
+    const botao = document.getElementById("botao");
+    const opcoes = document.getElementById("opcoes");
+    
+    botao.addEventListener("mouseenter", () => {
+        opcoes.style.display = "block";
+    });
+    
+    botao.addEventListener("mouseleave", () => {
+        opcoes.style.display = "none";
+    });
+    
+    // Obtém a URL atual da página
+    const currentPageURL = window.location.href;
+    
+    // Percorre cada link nas opções
+    const links = opcoes.getElementsByTagName("a");
+    for (let i = 0; i < links.length; i++) {
+        const link = links[i];
+    
+        // Verifica se o link corresponde à página atual
+        if (link.href === currentPageURL) {
+            link.classList.add("selecionado");
+        }
+    }
+    

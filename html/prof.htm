@@ -1,10 +1,18 @@
-<!-- <!DOCTYPE html>
-<html lang="Pt-BR">
+
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
+    <title>Mentores</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
+        rel="stylesheet" />
+
+    <script defer src="../scripts/prof.js"></script>
     <link rel="stylesheet" href="../styles/prof.css" />
 </head>
 
@@ -22,84 +30,44 @@
         <img class="linha" src="../svg/linha5.svg" alt="" />
     </div>
 
-    <div class="conteiner-lateral">
-        <div class="itens">
-            <img src="../svg/inicio.svg" alt="casinha" />
-            <p>Inicio</p>
-            <img src="../svg/usuario.svg" alt="" />
-            <p>usuario</p>
-            <img src="../svg/coraçao.svg" alt="" />
-            <p>Emocionometro</p>
-        </div>
-        <div class="barra-de-pesquisa">
-            <input type="text" placeholder="Pesquise uma palavra-chave em cinza claro" />
-            <img src="icone-pesquisa.svg" alt="Ícone de Pesquisa" />
-        </div>
-        <button class="botao-verde">+ Novo Usuário</button>
-        <div class="lista-de-professores">
-           
-        </div>
-    </div>
-    <script src="/scripts/prof.js"></script>
-</body>
-
-</html> -->
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <title>Mentores</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"rel="stylesheet">
-    
-    <script defer src="../scripts/prof.js"></script>
-    <link rel="stylesheet" href="../styles/prof.css">
-
-</head>
-
-<body>
-    <div class="parte-superior">
-        <img class="imagem1" src="../img/login2.png" alt="img" />
-        <img class="pessoa" src="../svg/pessoa.svg" alt="pessoa" />Jessica
-        Stefanye
-    </div>
-    <div class="linhas">
-        <img class="linha" src="../svg/linha.svg" alt="" />
-        <img class="linha" src="../svg/linha2.svg" alt="" />
-        <img class="linha" src="../svg/linha3.svg" alt="" />
-        <img class="linha" src="../svg/linha4.svg" alt="" />
-        <img class="linha" src="../svg/linha5.svg" alt="" />
-    </div>
-    
     <div class="box-content">
-
-        <div class="box-purple">
-       
+        <div class="boxLateral">
             <menu>
                 <button id="professores" class="btnstatic dflex">
-                    <img src="../svg/inicio.svg" alt="">
+                    <img src="../svg/inicio.svg" alt="" />
                     <p>Inicio</p>
                 </button>
-                <button onclick="Usuarios()" class="btn-menu dflex">
-                    <img src="../svg/usuario.svg" alt="">
+                <button  class="btn-menu dflex">
+                    <img src="../svg/usuario.svg" alt="" />
                     <p>Usuarios</p>
+                    <div class="botao" id="botao">
+                        <div class="opcoes" id="opcoes">
+                            <ul>
+                                <li><a href="pagina1.html">Professor</a></li>
+                                <li><a href="pagina2.html">Aluno</a></li>
+    
+                            </ul>
+                        </div>
+                    </div>
                 </button>
                 <button onclick="emocionometro()" class="btn-menu dflex">
-                    <img src="../svg/coraçao.svg" alt="">
+                    <img src="../svg/coraçao.svg" alt="" />
                     <p>Emocionometro</p>
+                   
+                    <button onclick="emocionometro()" class="btn-menu dflex">
+                        <img src="../svg/perfil.svg" alt="" />
+                        <p>Meu perfil</p>
+                    </button>
+                    <button onclick="emocionometro()" class="btn-menu dflex">
+                        <img src="../svg/sair.svg" alt="" />
+                        <p>Sair</p>
+                    
+                    </button>
                 </button>
-                
             </menu>
         </div>
 
         <div class="box-silver">
-         
-
             <h4>Usuários > professor</h4>
 
             <div>
@@ -107,12 +75,12 @@
                     <div id="formulario">
                         <div class="search-lupa">
                             <input class="input-search" type="search" name="search" id="search"
-                                placeholder="Pesquise uma palavra-chave">
-                            <img src="../../svg/search.svg" alt="lupa" id="lupa" >
+                                placeholder="Pesquise uma palavra-chave" />
+                            <img src="../svg/lupa.svg" alt="lupa" id="lupa" />
                         </div>
 
                         <button onclick="novoUsuario()" class="btn-green dflex" type="button">
-                            <img src="../../svg/adicionar.svg" alt="">
+                            <img src="../../svg/adicionar.svg" alt="" />
                             + Novo Usuário
                         </button>
                     </div>
@@ -120,28 +88,35 @@
                         <div class="dflex">
                             <div class="width100">
                                 <p class="info-purple border-radius-purple-left">Nome</p>
-                                <div id="info-content1">
-                                    <!-- <p class="info-white">Juliana Amaral</p> -->
-                                </div>
+                                <div id="info-content1"></div>
                             </div>
-                            <div class=" width100">
+                            <div class="width100">
                                 <p class="info-purple">Disciplina</p>
-                                <div id="info-content2">
-                                    <!-- <p class="info-white">Juliana@gmaiil.com</p> -->
+                                <div id="info-content2"></div>
+
+                                <div class="center-text">
+                                    <p class="info-purple border-radius-purple-reght">Perfil</p>
                                 </div>
-                            </div>
-                            <div class="center-text">
-                                <p class="info-purple border-radius-purple-reght">Perfil</p>
                                 <div id="info-content3">
                                     <div class="center-text">
-                                        <p class="info-purple border-radius-purple-reght">Ativo</p>
-                                        <div id="info-content4">
-                                            <div class="center-text">
-                                                <p class="info-purple border-radius-purple-reght">Açoes</p>
-                                                <div id="info-content5">
-                                    <div class="info-white dflex ">
-                                        <img onclick="editarMentor()" src="../../svg/editar.svg" alt="">
-                                        <img src="../../svg/delete.svg" alt="">
+                                        <p class="info-purple border-radius-purple-reght">
+                                            Ativo
+                                        </p>
+                                    </div>
+                                    </div>
+                                    <div id="info-content4">
+                                        <div class="center-text">
+                                            <p class="info-purple border-radius-purple-reght">
+                                                Açoes
+                                            </p>
+                                        </div>
+                                        </div>
+                                        <div id="info-content5">
+                                    </div>
+                                    <div class="info-white dflex">
+                                        <img onclick="editarPtofessor()" src="../svg/lapis.svg" alt="" />
+                                        <img src="../svg/lixeira.svg" alt="" />
+                                    </div>
                                     </div>
                                 </div>
                             </div>

@@ -1,26 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/inicio.css">
-    <script src="../scripts/app.js"></script>
+    <title>Bem vindo!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
+        rel="stylesheet" />
+
+    <script defer src="../scripts/prof.js"></script>
+    <link rel="stylesheet" href="../styles/prof.css" />
 </head>
+
 <body>
-    <div class="box" >
-    <div class="loader-container">
-        <div class="loader">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-        </div>
-        <h1>Seja bem-vindo(a)!</h1>
-        <p>Estamos preparando tudo para te receber...</p>
+    <div class="parte-superior">
+        <img class="imagem1" src="../img/login2.png" alt="img" />
+        <img class="pessoa" src="../svg/pessoa.svg" alt="pessoa" />Jessica
+        Stefanye
     </div>
-    <script src="../scripts/inicio.js"></>
-</div>
+    <div class="linhas">
+        <img class="linha" src="../svg/linha.svg" alt="" />
+        <img class="linha" src="../svg/linha2.svg" alt="" />
+        <img class="linha" src="../svg/linha3.svg" alt="" />
+        <img class="linha" src="../svg/linha4.svg" alt="" />
+        <img class="linha" src="../svg/linha5.svg" alt="" />
+    </div>
+
+    <div class="box-content">
+        <div class="boxLateral">
+            <menu>
+                <button id="professores" class="btnstatic dflex">
+                    <img src="../svg/inicio.svg" alt="" />
+                    <p>Inicio</p>
+                </button>
+                <button class="btn-menu dflex">
+                    <img src="../svg/usuario.svg" alt="" />
+                    <p>Usuarios</p>
+                    <div class="botao" id="botao">
+                        <div class="opcoes" id="opcoes">
+                            <ul>
+                                <li><a href="pagina1.html">Professor</a></li>
+                                <li><a href="pagina2.html">Aluno</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </button>
+                <button onclick="emocionometro()" class="btn-menu dflex">
+                    <img src="../svg/coraçao.svg" alt="" />
+                    <p>Emocionometro</p>
+
+                    <button onclick="emocionometro()" class="btn-menu dflex">
+                        <img src="../svg/perfil.svg" alt="" />
+                        <p>Meu perfil</p>
+                    </button>
+                    <button onclick="emocionometro()" class="btn-menu dflex">
+                        <img src="../svg/sair.svg" alt="" />
+                        <p>Sair</p>
+
+                    </button>
+                </button>
+
+            </menu>
+<div class="FraseCentral"
+            <h3>Olá! Bem vindo ao seu</h3>
+            <h1>EMOCIONÔMETRO DE GRUPO</h1>
+        </div>
+        </div>
+
+        
+                                </div>
+                            
+                        
+                    
+            
+        
+        
+ 
 </body>
+
 </html>
