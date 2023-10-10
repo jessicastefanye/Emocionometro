@@ -129,7 +129,7 @@ h4,.main-content{
     .main-content {
        
         padding: 20px 20px 50px 20px;
-        -moz-box-shadow: 0px 0px 25px 0px rgba(163, 163, 163, 0.2);
+        
     }
 
 #formulario {
@@ -293,4 +293,33 @@ h4,.main-content{
 .opcoes a[href="${currentPageURL}"] {
     background-color: #FF4500; /* Laranja escuro quando na página de destino */
     color: #fff;
+}
+
+
+    strong {
+        font-size: 40px;
+        display: flex;
+        width: -234px;
+        height: 0px;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin-right: 354px;
+    }
+
+.graf{
+    margin-left: 343px;
+    margin-top: -357px;
+}
+.dias{
+    height: 40%;
+    width: 40%;
+}
+.regis{
+    height: 40%;
+    width: 40%;
+}
+.perc{
+    height: 40%;
+    width: 40%;
 }

@@ -19,10 +19,10 @@ const rendermentor = (professores) =>{
         }
     
         info_content_1.innerHTML += `
-          <p class="info-white ${corlist}">${professores.mentor}</p>
+          <p class="info-white ${corlist}">${professores.nome}</p>
         `;
         info_content_2.innerHTML += `
-          <p class="info-white ${corlist}">${professores.email}</p>
+          <p class="info-white ${corlist}">${professores.diciplina}</p>
         `;
         info_content_3.innerHTML += `
           <div class="info-white dflex ${corlist}">
@@ -48,7 +48,7 @@ const rendermentor = (professores) =>{
         pesquisa = `?q=${textoPesquisa}`
       }
     
-        const retorno = await fetch (`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/professores${pesquisa}`)
+        const retorno = await fetch (`https://emocionimetro.onrender.com/professores${pesquisa}`)
         const professores = await retorno.json()
     
         rendermentor(professores)
@@ -76,7 +76,7 @@ const rendermentor = (professores) =>{
     }
     
     const deletarMentor = async (id) => {
-       await  fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/professores/${id}`, {
+       await  fetch(`https://emocionimetro.onrender.com${id}`, {
             method: 'DELETE'
         })
         getmentores()
