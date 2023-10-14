@@ -1,8 +1,10 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const meuBotao = document.getElementById("open");
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Redirecione para a página desejada
+//     window.location.href = "file:///C:/Users/Jessi/OneDrive/%C3%81rea%20de%20Trabalho/Projeto/Emocionometro/html/carregando.html";
+//   });
+console.log("antes da funçao")
+  const bemVindo=()=>{
+    window.location ="carregamento.html"
+    console.log("dentro da funçao")
+  }
 
-    meuBotao.addEventListener("click", function () {
-        // Redirecionar para a outra página
-        window.location.href = "file:///C:/Users/Jessi/OneDrive/%C3%81rea%20de%20Trabalho/Projeto/Emocionometro/html/inicio.html"; // Substitua com a URL da outra página
-    });
-});

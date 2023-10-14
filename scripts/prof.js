@@ -35,7 +35,7 @@ const rendermentor = (professores) =>{
     
     const btnPurpleMenu = () => {
       const purpleBTN =document.getElementById('professores')
-        purpleBTN.classList.toggle("btnstatic-purple")
+        purpleBTN.classList.toggle(".btnstatic-laranja")
     }
     btnPurpleMenu()
     

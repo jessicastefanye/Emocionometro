@@ -53,7 +53,7 @@ menu{
     text-align: start;
     align-items: center;
 }
-.btnstatic-purple{
+..btnstatic-laranja{
     background: #FAA61A;
     font-weight: 600;
 }
