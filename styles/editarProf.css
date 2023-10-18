@@ -181,8 +181,4 @@ form .btn-purple{
     transition: 0.5s;
 }
 
-@media (max-width: 1222px){
-    form .form-container{
-        flex-direction: column;
-    }
-}
+
