@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Emocionometro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
+        rel="stylesheet" />
+
+    <script defer src="../scripts/emocionometro.js"></script>
+    <link rel="stylesheet" href="../styles/emocionometro.css" />
+</head>
+
+<body>
+    <div class="parte-superior">
+        <img class="imagem1" src="../img/login2.png" alt="img" />
+        <img class="pessoa" src="../svg/pessoa.svg" alt="pessoa" />Jessica
+        Stefanye
+    </div>
+    <div class="linhas">
+        <img class="linha" src="../svg/linha.svg" alt="" />
+        <img class="linha" src="../svg/linha2.svg" alt="" />
+        <img class="linha" src="../svg/linha3.svg" alt="" />
+        <img class="linha" src="../svg/linha4.svg" alt="" />
+        <img class="linha" src="../svg/linha5.svg" alt="" />
+    </div>
+
+    
+    <div class="box-content">
+        <div class="boxLateral">
+          <div>
+            <button id="professores" class="btnstatic dflex">
+              <img src="../svg/inicio.svg" alt="" />
+              <p>Inicio</p>
+            </button>
+            <button class="btn-menu dflex">
+              <img src="../svg/usuario.svg" alt="" />
+              <p>Usuarios</p>
+              <div class="botao" id="botao">
+                <div class="opcoes" id="opcoes">
+                  <ul id="lista-oculta">
+                    <li><a class="btn-menu dflex" href="pagina1.html">Professor</a></li>
+                    <li><a class="btn-menu dflex" href="pagina2.html">Aluno</a></li>
+                </ul>
+                </div>
+              </div>
+            </button>
+            <button onclick="emocionometro()" class="btn-menu dflex">
+              <img src="../svg/coraçao.svg" alt="" />
+              <p>Emocionometro</p>
+            </button>
+          </div>
+          <div>
+            <button onclick="emocionometro()" class="btn-menu dflex">
+              <img src="../svg/Perfil.svg" alt="" />
+              <p>Meu Perfil</p>
+            </button>
+            <button onclick="emocionometro()" class="btn-menu dflex">
+              <img src="../svg/sair.svg" alt="" />
+              <p>Sair</p>
+            </button>
+          </div>
+        </div>
+  
+        <div class="conteudo">
+            <div class="titulo">
+                <h3>Emocionômetro da escola</h3>
+
+                <img src="../img/dias.png" alt="">
+            </div>
+            <div class="imagens">
+                <div class="im1">
+                    <img src="../img/grafico.png" alt="" width="100%" height="100%">
+                </div>
+                <div class="imagens2">
+                    <div class="im2">
+                        <img src="../img/totalregostros.png" alt="" width="100%" height="100%">
+                        
+                    </div>
+                    <div class="im3">
+                        <img src="../img/graf2.png" alt="" width="100%" height="100%">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

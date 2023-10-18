@@ -22,7 +22,7 @@ const rendermentor = (professores) =>{
           <p class="info-white ${corlist}">${professores.nome}</p>
         `;
         info_content_2.innerHTML += `
-          <p class="info-white ${corlist}">${professores.diciplina}</p>
+          <p class="info-white ${corlist}">${professores.Diciplina}</p>
         `;
         info_content_3.innerHTML += `
           <div class="info-white dflex ${corlist}">
@@ -123,4 +123,22 @@ const rendermentor = (professores) =>{
             link.classList.add("selecionado");
         }
     }
-    
+    // Supondo que você está buscando os dados da API e os armazenando em uma variável chamada 'data'
+const dataList = document.getElementById("data-list");
+
+data.forEach(item => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+        <td>${item.nome}</td>
+        <td>${item.Disciplina}</td>
+        <td>${item.Perfil}</td>
+        <td>
+            <img src="${item.ativo ? '../svg/ativo.svg' : '../svg/inativo.svg'}" alt="Ativo" />
+        </td>
+        <td>
+            <img src="../svg/lapis.svg" alt="Editar" onclick="editarProfessor(${item.id})" />
+            <img src="../svg/lixeira.svg" alt="Excluir" onclick="excluirProfessor(${item.id})" />
+        </td>
+    `;
+    dataList.appendChild(row);
+});

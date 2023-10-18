@@ -63,7 +63,7 @@ menu {
     width: 100%;
 }
 
-..btnstatic-laranja {
+.btnstatic-laranja {
     background: #FAA61A;
     font-weight: 600;
 }
@@ -107,33 +107,8 @@ menu {
 
 }
 
-.info-white img:hover {
-    cursor: pointer;
-}
 
-/* botão de voltar temporario */
-#voltar {
-    position: fixed;
-    right: 50%;
-    top: 10px;
-}
 
-.cinza100 {
-    background-color: #F5F5F5;
-}
-
-.cinza50 {
-    background-color: #FAFAFA;
-}
-
-.botao {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-}
 
 .opcoes {
     display: none;

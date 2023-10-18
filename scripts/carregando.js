@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Redirecione para a página desejada
-    window.location.href = "file:///C:/Users/Jessi/OneDrive/%C3%81rea%20de%20Trabalho/Projeto/Emocionometro/html/inicio.html";
-  });
-  
+  // Defina o tempo em milissegundos (1000ms = 1 segundo)
+  var tempoParaRedirecionar = 5000; // Redirecionará após 5 segundos
+
+  // Use a função setTimeout para redirecionar após o tempo especificado
+  setTimeout(function() {
+      // Altere a URL para a qual deseja redirecionar
+      window.location.href = 'https://emocionometro.vercel.app/html/inicio.html';
+  }, tempoParaRedirecionar);

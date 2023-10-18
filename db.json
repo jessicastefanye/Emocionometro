@@ -1,19 +1,43 @@
+
 {
-  "posts": [
+  "professores": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "nome": "Severus Snape",
+      "Disciplina": "Poções",
+      "Perfil": "Professor."
+    },
+    {
+      "id": 2,
+      "nome": "Minerva McGonagall",
+      "Disciplina": "Transfiguração",
+      "Perfil": "Professor."
+    },
+    {
+      "id": 3,
+      "nome": "Albus Dumbledore",
+      "Disciplina": "Feitiços",
+      "Perfil": "Diretor."
     }
   ],
-  "comments": [
+  "alunos": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "nome": "Harry Potter",
+      
+      "Perfil": "Aluno."
+    },
+    {
+      "id": 2,
+      "nome": "Hermione Granger",
+      
+      "Perfil": "Aluno."
+    },
+    {
+      "id": 3,
+      "nome": "Ron Weasley",
+      
+      "Perfil": "aluno."
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
