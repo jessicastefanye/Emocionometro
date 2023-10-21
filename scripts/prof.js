@@ -1,14 +1,14 @@
 //função para exibir conteudo na tela formatado
-const rendermentor = (professores) =>{
+const renderprofessor = (professores) =>{
     const info_content_1 = document.getElementById('info-content1')
     const info_content_2 = document.getElementById('info-content2')
     const info_content_3 = document.getElementById('info-content3')
-    
+    const info_content_4 = document.getElementById('info-content4')
     let contador = 0
       info_content_1.innerHTML = ''
       info_content_2.innerHTML = ''
       info_content_3.innerHTML = ''
-    
+      info_content_4.innerHTML = ''
     professores.forEach(professores => {
         contador++;
         let corlist = '';
@@ -22,14 +22,16 @@ const rendermentor = (professores) =>{
           <p class="info-white ${corlist}">${professores.nome}</p>
         `;
         info_content_2.innerHTML += `
-          <p class="info-white ${corlist}">${professores.Diciplina}</p>
+          <p class="info-white ${corlist}">${professores.Disciplina}</p>
         `;
         info_content_3.innerHTML += `
-          <div class="info-white dflex ${corlist}">
-            <img onclick="editarPtofessor(${professores.id})" src="../../svg/editar.svg" alt="">
-            <img onclick="deletarMentor(${professores.id})" src="../../svg/delete.svg" alt="">
-          </div>
+          <p class="info-white ${corlist}">${professores.Perfil}</p>
         `;
+        info_content_4.innerHTML += `
+        <p class="info-white ${corlist}">${professores.Status ? '<img src="../svg/ativo.svg" alt="" />' : '<img src="../svg/desatv.svg" alt="" />'}</p>
+      `;
+     
+        
       });
     }
     
@@ -41,31 +43,31 @@ const rendermentor = (professores) =>{
     
     
      //recebe os dados da api
-    const getmentores = async (textoPesquisa = null) => {
+    const getprofessores = async (textoPesquisa = null) => {
       let pesquisa = ''
     
       if (textoPesquisa){
         pesquisa = `?q=${textoPesquisa}`
       }
     
-        const retorno = await fetch (`https://emocionimetro.onrender.com/professores${pesquisa}`)
+        const retorno = await fetch (`https://emocoes.onrender.com/professores${pesquisa}`)
         const professores = await retorno.json()
     
-        rendermentor(professores)
+        renderprofessor(professores)
     }
-    getmentores()
+    getprofessores()
     
     const search = document.getElementById('search')
     search.addEventListener('keyup', (e) =>{
       if(e.key === 'Enter'){
         const pesquisa = search.value
-        getmentores(pesquisa)
+        getprofessores(pesquisa)
       }
     })
     const lupa = document.getElementById('lupa')
     lupa.addEventListener("click", (e) =>{
       const pesquisa = search.value
-        getmentores(pesquisa)
+        getprofessores(pesquisa)
     })
     
     
@@ -76,20 +78,20 @@ const rendermentor = (professores) =>{
     }
     
     const deletarMentor = async (id) => {
-       await  fetch(`https://emocionimetro.onrender.com${id}`, {
+       await  fetch(`https://emocoes.onrender.com${id}`, {
             method: 'DELETE'
         })
-        getmentores()
+        getprofessores()
     }
     
     
     //vai para pagina mentoias
-    const Usuarios = () => {
-       window.location = "/html/Usuarios/Usuarios.html"
-     }
+    // const Usuarios = () => {
+    //    window.location = "/html/Usuarios/Usuarios.html"
+    //  }
     //vai para pagina emocionometro
     const emocionometro = () => {
-       window.location = "/html/emocionometro/emocionometro.html"
+       window.location = "https://emocionometro.vercel.app/html/emocio.html"
     }
     //vai para pagina alunos
     const alunos = () => {
@@ -97,7 +99,7 @@ const rendermentor = (professores) =>{
     }
     //retorna a pag novoUsuario
     const novoUsuario = () => {
-      window.location = "/html/professores/novoUsuario.html"
+      window.location = "C:\Users\Jessi\OneDrive\Área de Trabalho\Projeto\Emocionometro\html\addprof.html"
     }
     const botao = document.getElementById("botao");
     const opcoes = document.getElementById("opcoes");
@@ -123,22 +125,4 @@ const rendermentor = (professores) =>{
             link.classList.add("selecionado");
         }
     }
-    // Supondo que você está buscando os dados da API e os armazenando em uma variável chamada 'data'
-const dataList = document.getElementById("data-list");
-
-data.forEach(item => {
-    const row = document.createElement("tr");
-    row.innerHTML = `
-        <td>${item.nome}</td>
-        <td>${item.Disciplina}</td>
-        <td>${item.Perfil}</td>
-        <td>
-            <img src="${item.ativo ? '../svg/ativo.svg' : '../svg/inativo.svg'}" alt="Ativo" />
-        </td>
-        <td>
-            <img src="../svg/lapis.svg" alt="Editar" onclick="editarProfessor(${item.id})" />
-            <img src="../svg/lixeira.svg" alt="Excluir" onclick="excluirProfessor(${item.id})" />
-        </td>
-    `;
-    dataList.appendChild(row);
-});
+  

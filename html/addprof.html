@@ -7,14 +7,14 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
       rel="stylesheet"
     />
 
-    <script defer src="../scripts/inicio.js"></script>
-    <link rel="stylesheet" href="../styles/inicio.css" />
+    <script defer src="../scripts/addprof.js"></script>
+    <link rel="stylesheet" href="../styles/addprof.css" />
   </head>
 
   <body>
@@ -38,15 +38,15 @@
             <img src="../svg/inicio.svg" alt="" />
             <p>Inicio</p>
           </button>
-          <button id="btn-usuario" class="btn-menu dflex">
+          <button class="btn-menu dflex">
             <img src="../svg/usuario.svg" alt="" />
             <p>Usuarios</p>
             <div class="botao" id="botao">
               <div class="opcoes" id="opcoes">
-                <ul id="lista-oculta" style="display: none">
+                <ul id="lista-oculta">
                   <li><a class="btn-menu dflex" href="pagina1.html">Professor</a></li>
                   <li><a class="btn-menu dflex" href="pagina2.html">Aluno</a></li>
-                </ul>
+              </ul>
               </div>
             </div>
           </button>
@@ -67,10 +67,34 @@
         </div>
       </div>
 
-      <div class="FraseCentral">
-        <h3>Olá! Bem vindo ao seu</h3>
-        <h1>EMOCIONÔMETRO DE GRUPO</h1>
-      </div>
+      <div id="voltar" class="BT-H4 dflex">
+        <button class="btn-voltar" onclick="professores()"><img src="../../svg/voltar.svg" alt=""></button>
+        <h4>Novo Usuario > Professor</h4>
+    </div>
+    <div>
+        <main class="main-content">
+            <form id="formulario" action="">
+                <p class="leterpurple">Dados do usuario</p>
+
+                <div class=" form-container dflex">
+                    <div class="direction-col">
+                        <label class="label" for="nome">nome</label>
+                        <input type="text" name="nome" id="nome">
+                    </div>
+                    <div class="direction-col">
+                        <label class="label" for="perfil">Perfil</label>
+                        <input type="text" name="perfil" id="perfil">
+                    </div>
+                    <div class="direction-col">
+                        <label class="label" for="">Diciplina</label>
+                        <input type="text" name="diciplina" id="diciplina">
+                    </div>
+                </div>
+                <button class="btn-purple"  type="submit">
+                    Salvar
+                </button>
+            </form>
+        </main>
     </div>
   </body>
 </html>

@@ -173,3 +173,14 @@ menu {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
+
+#lista-oculta {
+    display: none; /* Oculta a lista por padrão */
+  }
+  
+  #btn-usuario {
+    cursor: pointer; /* Torna o cursor um ponteiro ao passar o mouse sobre o botão */
+  }
+  .oculto {
+    display: none;
+  }
