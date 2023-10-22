@@ -130,7 +130,7 @@ const alunos = () => {
 //retorna a pag novoUsuario
 const novoUsuario = () => {
   window.location =
-    "C:UsersJessiOneDriveÁrea de TrabalhoProjetoEmocionometrohtmladdprof.html";
+    "file:///C:/Users/Jessi/OneDrive/%C3%81rea%20de%20Trabalho/Projeto/Emocionometro/html/addprof.html";
 };
 const botao = document.getElementById("botao");
 const opcoes = document.getElementById("opcoes");
