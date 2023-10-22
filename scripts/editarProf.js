@@ -1,7 +1,7 @@
 const  formulario = document.getElementById('formulario')
 let mentoresId = null
 
-//recupera o ID do professor que foi enviado no parametro da URL
+//recupera o ID do Professor que foi enviado no parametro da URL
 const getIdUrl = () => {
     console.log(window.location.search)
     const paramString = window.location.search
@@ -13,7 +13,7 @@ const getIdUrl = () => {
 }
 
 
-// recuperar professor
+// recuperar Professor
 const buscarMentores = async () => {
     // Dou um fetch na url do json-server enviando o id dos professores
     const response= await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/professores/${mentoresId}`)
@@ -25,12 +25,12 @@ const buscarMentores = async () => {
 
 formulario.addEventListener('submit', (event) => {
     event.preventDefault()
-    const professor = formulario.elements['nome'].value
-    const perfil = formulario.elements['perfil'].value
+    const Professor = formulario.elements['nome'].value
+    const Perfil = formulario.elements['Perfil'].value
 
     const professores = {
-        professor,
-        perfil,
+        Professor,
+        Perfil,
 
     }
    editarMentores(professores)
@@ -39,8 +39,8 @@ formulario.addEventListener('submit', (event) => {
 
 // Injeto os dados do livro no formulario, com dados do json
 const carregarDadosFormulario = async (professores) => {
-    document.getElementById('nome').value = professores.professor
-    document.getElementById('perfil').value = professores.perfil
+    document.getElementById('nome').value = professores.Professor
+    document.getElementById('Perfil').value = professores.Perfil
 }
 
 const editarMentores = async (professores) => {

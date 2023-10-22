@@ -32,6 +32,169 @@ body {
 }
 
 *,
+*,p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+
+}
+
+.box-content,
+button,
+input {
+    font-family: 'Poppins', sans-serif;
+}
+
+menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-menu,
+.btnstatic {
+    font-size: 16px;
+    border: none;
+    background: none;
+    color: white;
+    height: 56px;
+    text-align: start;
+    align-items: center;
+    width: 100%;
+}
+
+.btnstatic-laranja {
+    background: #FAA61A;
+    font-weight: 600;
+}
+
+.btn-menu:hover {
+    cursor: pointer;
+    font-weight: 600;
+    background:
+        #F48221;
+}
+
+.btn-menu img,
+.btnstatic img {
+    margin: 0 17px 0 24px;
+}
+
+.box-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+}
+/* 
+.boxLateral {
+      display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 274px;
+    background: #F9E423;
+    height: 100vh;
+} */
+
+.dflex {
+    display: flex;
+}
+.center-text {
+    text-align: center;
+}
+.info-white :nth-child(1) {
+    margin-right: 10px;
+
+}
+
+
+.boxLateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 274px;
+    background: #F9E423;
+    height: 100vh;
+}
+
+/* .dflex {
+    display: flex;
+}
+.center-text {
+    text-align: center;
+}
+.info-white :nth-child(1) {
+    margin-right: 10px;
+
+} */
+
+
+
+
+.opcoes {
+    display: none;
+    color: white;
+    top: 100%;
+    background-color: #FFA500;
+    text-align: center;
+}
+
+.botao:hover .opcoes {
+    display: block;
+}
+
+.opcoes ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.opcoes li {
+    padding: 10px 0;
+    
+}
+
+.opcoes li:last-child {
+    border-bottom: none;
+}
+
+.opcoes a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: contents;
+}
+
+*/ .opcoes a:hover {
+    text-decoration: underline;
+}
+
+.opcoes a.selecionado {
+    background-color: #FFA500;
+    /* Laranja claro quando selecionado */
+    color: #fff;
+}
+
+.opcoes a[href="${currentPageURL}"] {
+    background-color: #FF4500;
+    /* Laranja escuro quando na página de destino */
+    color: #fff;
+}
+.FraseCentral{
+    
+    flex-direction: column;
+    align-items: center;
+    
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
 p {
     margin: 0;
     padding: 0;
@@ -86,101 +249,3 @@ menu {
     justify-content: space-between;
 
 }
-
-.boxLateral {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 274px;
-    background: #F9E423;
-    height: 100vh;
-}
-
-.dflex {
-    display: flex;
-}
-.center-text {
-    text-align: center;
-}
-.info-white :nth-child(1) {
-    margin-right: 10px;
-
-}
-
-
-
-
-.opcoes {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
-}
-
-.botao:hover .opcoes {
-    display: block;
-}
-
-.opcoes ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.opcoes li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-
-.opcoes li:last-child {
-    border-bottom: none;
-}
-
-.opcoes a {
-    text-decoration: none;
-    color: #333;
-}
-
-*/ .opcoes a:hover {
-    text-decoration: underline;
-}
-
-.opcoes a.selecionado {
-    background-color: #FFA500;
-    /* Laranja claro quando selecionado */
-    color: #fff;
-}
-
-.opcoes a[href="${currentPageURL}"] {
-    background-color: #FF4500;
-    /* Laranja escuro quando na página de destino */
-    color: #fff;
-}
-.FraseCentral{
-    
-    flex-direction: column;
-    align-items: center;
-    
-  position: absolute;
-  top: 50%;
-  left: 60%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-
-#lista-oculta {
-    display: none; /* Oculta a lista por padrão */
-  }
-  
-  #btn-usuario {
-    cursor: pointer; /* Torna o cursor um ponteiro ao passar o mouse sobre o botão */
-  }
-  .oculto {
-    display: none;
-  }

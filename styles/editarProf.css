@@ -75,7 +75,7 @@ menu{
     width: 56px;
     margin-left:16px;
 }
-h4,.p-user :nth-child(1),.btn-green,.btn-purple,main p{
+h4,.p-user :nth-child(1),.btn-green,.btn-verde,main p{
     font-weight: 600;
 }
 h4,main p,.p-user :nth-child(1){
@@ -164,7 +164,7 @@ form .label{
     margin: 32px 0px 27px 0px;
 }
 
-form .btn-purple{
+form .btn-verde{
     font-size: 16px;
     width: 400px;
     height: 48px;
@@ -175,7 +175,7 @@ form .btn-purple{
     background-color: #482D83;
     transition: 0.5s;
 }
-.btn-purple:hover{
+.btn-verde:hover{
     cursor: pointer;
     background-color: #564696;
     transition: 0.5s;

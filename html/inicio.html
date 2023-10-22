@@ -41,29 +41,36 @@
           <button id="btn-usuario" class="btn-menu dflex">
             <img src="../svg/usuario.svg" alt="" />
             <p>Usuarios</p>
-            <div class="botao" id="botao">
-              <div class="opcoes" id="opcoes">
-                <ul id="lista-oculta" style="display: none">
-                  <li><a class="btn-menu dflex" href="pagina1.html">Professor</a></li>
-                  <li><a class="btn-menu dflex" href="pagina2.html">Aluno</a></li>
-                </ul>
-              </div>
-            </div>
           </button>
-          <button onclick="emocionometro()" class="btn-menu dflex">
+          <div class="botao" id="botao">
+            <div class="opcoes" id="opcoes">
+              <ul id="lista-oculta">
+                <li>
+                  <a class="btn-menu dflex" href="pagina1.html">Professor</a>
+                </li>
+                <li><a class="btn-menu dflex" href="pagina2.html">Aluno</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <button
+            onclick="redirecionarParaEmocionometro()"
+            class="btn-menu dflex"
+          >
             <img src="../svg/coraçao.svg" alt="" />
             <p>Emocionometro</p>
           </button>
-        </div>
-        <div>
-          <button onclick="emocionometro()" class="btn-menu dflex">
-            <img src="../svg/Perfil.svg" alt="" />
-            <p>Meu Perfil</p>
-          </button>
-          <button onclick="emocionometro()" class="btn-menu dflex">
-            <img src="../svg/sair.svg" alt="" />
-            <p>Sair</p>
-          </button>
+          <div>
+            <button onclick="redirecionarParaPerfil()" class="btn-menu dflex">
+              <img src="../svg/Perfil.svg" alt="" />
+              <p>Meu Perfil</p>
+            </button>
+
+            <button onclick="redirecionarParaSair()" class="btn-menu dflex">
+              <img src="../svg/sair.svg" alt="" />
+              <p>Sair</p>
+            </button>
+          </div>
         </div>
       </div>
 

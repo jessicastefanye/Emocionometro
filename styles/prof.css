@@ -263,7 +263,7 @@ menu {
     height: 100vh;
 }
 
-/* .dflex {
+.dflex {
     display: flex;
 }
 .center-text {
@@ -272,7 +272,7 @@ menu {
 .info-white :nth-child(1) {
     margin-right: 10px;
 
-} */
+}
 
 
 
@@ -325,4 +325,7 @@ menu {
     background-color: #FF4500;
     /* Laranja escuro quando na página de destino */
     color: #fff;
+}
+.açoes{
+    cursor: pointer;
 }
