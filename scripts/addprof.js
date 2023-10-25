@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   //funções menu/nagar
-  const professores = () => {
-    window.location = "./professores.html";
+  const Professores = () => {
+    window.location = "./Professores.html";
   };
   //vai para pagina mentoias
   const mentorias = () => {

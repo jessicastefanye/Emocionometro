@@ -15,10 +15,10 @@ const getIdUrl = () => {
 
 // recuperar Professor
 const buscarMentores = async () => {
-    // Dou um fetch na url do json-server enviando o id dos professores
-    const response= await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/professores/${mentoresId}`)
-    const professores = await response.json()
-    return professores
+    // Dou um fetch na url do json-server enviando o id dos Professores
+    const response= await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/Professores/${mentoresId}`)
+    const Professores = await response.json()
+    return Professores
 }
 
 // Envia os dados para o api jason server
@@ -28,32 +28,32 @@ formulario.addEventListener('submit', (event) => {
     const Professor = formulario.elements['nome'].value
     const Perfil = formulario.elements['Perfil'].value
 
-    const professores = {
+    const Professores = {
         Professor,
         Perfil,
 
     }
-   editarMentores(professores)
+   editarMentores(Professores)
 
 })
 
 // Injeto os dados do livro no formulario, com dados do json
-const carregarDadosFormulario = async (professores) => {
-    document.getElementById('nome').value = professores.Professor
-    document.getElementById('Perfil').value = professores.Perfil
+const carregarDadosFormulario = async (Professores) => {
+    document.getElementById('nome').value = Professores.Professor
+    document.getElementById('Perfil').value = Professores.Perfil
 }
 
-const editarMentores = async (professores) => {
-    await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/professores/${mentoresId}`, {
+const editarMentores = async (Professores) => {
+    await fetch(`https://api-projeto-de-conclusao-do-modulo-1.onrender.com/Professores/${mentoresId}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(professores)
+        body: JSON.stringify(Professores)
     })
     // Redireciono o usuario para a tela de listagem
-    window.location = "/html/professores/professores.html"
+    window.location = "/html/Professores/Professores.html"
 
 }
 
@@ -62,9 +62,9 @@ const carregarDados = async () => {
     //recupera o ID
     getIdUrl()
     // Buscar noticias
-    const professores = await buscarMentores()
+    const Professores = await buscarMentores()
     // Coloca os dados no formulario
-    carregarDadosFormulario(professores)
+    carregarDadosFormulario(Professores)
 
 }
 
@@ -72,8 +72,8 @@ const carregarDados = async () => {
 carregarDados()
 
 //funções menu/nagar
-const professores = () => {
-    window.location = "./professores.html"
+const Professores = () => {
+    window.location = "./Professores.html"
   }
   //vai para pagina mentoias
   const mentorias = () => {

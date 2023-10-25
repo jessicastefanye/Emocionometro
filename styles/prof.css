@@ -50,7 +50,7 @@ menu{
     text-align: start;
     align-items: center;
 }
-.btnstatic-laranja{
+btnVerde{
     background: #FAA61A;
     font-weight: 600;
 }
@@ -230,7 +230,7 @@ menu {
     width: 100%;
 }
 
-.btnstatic-laranja {
+btnVerde {
     background: #FAA61A;
     font-weight: 600;
 }
@@ -328,4 +328,55 @@ menu {
 }
 .açoes{
     cursor: pointer;
+}
+.dflex{
+    display: flex;
+}
+.width100{
+    width: 100%;
+}
+.center-text{
+    text-align: center;
+}
+.border-radius-purple-left{
+    border-radius: 16px 0px 0px 0px;
+}
+.border-radius-purple-reght{
+    border-radius: 0px 16px 0px 0px;
+}
+
+.info-purple{
+    color: white;
+    background:#482D83;
+    height: 72px;
+    padding: 24px 40px;
+    max-width: 100%;
+}
+.info-white{
+    /* background: #fafafa; */
+    height: 80px;
+    padding: 28px 40px;
+    align-items: center ;
+    margin: 8px 0;
+}
+.info-white :nth-child(1){
+    margin-right: 10px;
+
+}
+.info-white img:hover{
+    cursor: pointer;
+}
+.cinza100{
+    background-color: #F5F5F5;
+}
+.cinza50{
+    background-color: #FAFAFA;
+}
+#formulario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.box-content,button,input{
+    font-family: 'Poppins', sans-serif;
 }
