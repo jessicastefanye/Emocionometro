@@ -4,7 +4,7 @@
 
     botaoUsuario.addEventListener('click', function(event) {
        
-      console.log("oiiii")
+      
       if (listaOculta.style.display === 'none' || listaOculta.style.display === '') {
         listaOculta.style.display = 'block';
       } else {
@@ -24,5 +24,5 @@
     
       function redirecionarParaSair() {
         // Redirecione para a página de sair (ou faça alguma ação de logout)
-        window.location.href = "https://emocionometro.vercel.app/";
+        window.location.href = "https://direcionar().vercel.app/";
       }

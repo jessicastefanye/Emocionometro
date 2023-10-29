@@ -52,17 +52,17 @@
             </div>
           </div>
         </button>
-        <button onclick="emocionometro()" class="btn-menu dflex">
+        <button onclick="direcionar()" class="btn-menu dflex">
           <img src="../svg/coraçao.svg" alt="" />
           <p>Emocionometro</p>
         </button>
       </div>
       <div>
-        <button onclick="emocionometro()" class="btn-menu dflex">
+        <button onclick="direcionar()" class="btn-menu dflex">
           <img src="../svg/Perfil.svg" alt="" />
           <p>Meu Perfil</p>
         </button>
-        <button onclick="emocionometro()" class="btn-menu dflex">
+        <button onclick="direcionar()" class="btn-menu dflex">
           <img src="../svg/sair.svg" alt="" />
           <p>Sair</p>
         </button>
@@ -72,47 +72,56 @@
     <div class="box-silver">
       <h4>Usuários > Professor</h4>
 
-      
-        <main class="main-content">
-          <div id="formulario">
+      <main class="main-content">
+        <div id="formulario">
             <div class="search-lupa">
-              <input class="input-search" type="search" name="search" id="search"
-                placeholder="Pesquise uma palavra-chave">
-              <img src="../svg/lupa.svg" alt="lupa" id="lupa">
+                <input class="input-search" type="search" name="search" id="search" placeholder="Pesquise uma palavra-chave">
+                <img src="../svg/lupa.svg" alt="lupa" id="lupa">
             </div>
-
             <button onclick="novoProfessor()" class="btn-green dflex" type="button">
-
-              + Novo Usuário
-            </button>
-          </div>
-          <div class="box-info">
+              <img src="../img/Plus 24px.png" alt="">
+              <strong>Novo Professor</strong>
+          </button>
+        </div>
+        <div class="box-info">
             <div class="dflex">
-              <div class="width100">
-                <p class="info-tabela ">Nome</p>
-                <div id="info-content1"></div>
-              </div>
-              <div class="width100">
-                <p class="info-tabela">Disciplina</p>
-                <div id="info-content2"></div>
-              </div>
-              <div class="center-text">
-                <p class="info-tabela">Perfil</p>
-                <div id="info-content3"></div>
-              </div>
-              <div class="center-text">
-                <p class="info-tabela">Ativo</p>
-                <div id="info-content4"></div>
-              </div>
-              <div class="center-text">
-                <p class="info-tabela">Ações</p>
-                <div id="info-content5"></div>
-              </div>
+                <div class="info-container">
+                    <p>Nome</p>
+                    <div id="info-content1">
+                        <!-- Os dados dos professores serão exibidos aqui -->
+                    </div>
+                </div>
+                <div class="info-container">
+                    <p>Disciplina</p>
+                    <div id="info-content2">
+                        <!-- Os dados dos professores serão exibidos aqui -->
+                    </div>
+                </div>
+                <div class="info-container">
+                    <p>Perfil</p>
+                    <div id="info-content4">
+                        <!-- Os dados dos professores serão exibidos aqui -->
+                    </div>
+                </div>
+                <div class="info-container">
+                    <p>Ativo</p>
+                    <div id="info-content5">
+                        <!-- Os dados dos professores serão exibidos aqui -->
+                    </div>
+                </div>
+                <div class="info-container center-text">
+                    <p>Ações</p>
+                    <div id="info-content3">
+                        <!-- Os dados dos professores serão exibidos aqui -->
+                    </div>
+                </div>
             </div>
-          </div>
-        </main>
-      </div>
+        </div>
+    </main>
+    
+    
     </div>
+  </div>
 </body>
 
 </html>
