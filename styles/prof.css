@@ -1,6 +1,4 @@
-body{
-    background: #c9c7c7;
-}
+
 .parte-superior {
     display: flex;
     border: 1px;
@@ -65,9 +63,10 @@ btnVerde{
 }
 
 .box-silver{
-    background: #fcfcfc;
-    width: 100%;
-    height: 100vh;
+    background: #dad9d9;
+    margin-left: -43%;
+    height: 100%;
+    width: 102%;
 }
 
 
@@ -251,7 +250,8 @@ btnVerde {
     display: flex;
     width: 100%;
     justify-content: space-between;
-
+background: #dad9d9;
+height: 100%;
 }
 
 .boxLateral {
@@ -260,7 +260,7 @@ btnVerde {
     justify-content: space-between;
     width: 274px;
     background: #F9E423;
-    height: 100vh;
+    height: 535px;
 }
 
 .dflex {
@@ -506,6 +506,7 @@ body{
 
 .box-content,button,input{
     font-family: 'Poppins', sans-serif;
+    width: 87%;
 }
 
 menu{
@@ -540,7 +541,7 @@ menu{
 }
 
 .box-silver{
-    background: #fcfcfc;
+    
     width: 100%;
 }
 
@@ -569,7 +570,7 @@ h4{
 
 h4,.main-content{
    margin-left :32px;
-
+   margin-top: -42px;
 }
 
 
@@ -612,24 +613,7 @@ h4,.main-content{
 }
 
 
-.info-container p {
-   color:black ;
-}
-.professores-lista {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-    padding: 0;
-}
 
-.professores-lista li {
-    width: calc(25% - 20px);
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
 .professor-item {
     display: flex;
     flex-direction: row;
@@ -640,5 +624,83 @@ h4,.main-content{
     width: 20px;
     height: 20px;
   }
-  
+  .input-search{
+    font-size: 16px;
+    width: 400px;
+    height: 56px;
+    border-radius: 16px;
+    padding-left: 16px;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 16px;
 
+}
+
+.search-lupa img{
+    position: absolute;
+    top: 208px;
+    left: 628px;
+    height: 35px;
+    width: 34px;
+}
+
+
+.search-lupa img:hover{
+    cursor: pointer;
+ }
+#formulario {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+#botaoUsuario{
+    font-size: 16px;
+    background: #00C247;
+    width:271px;
+    height:56px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+  
+}
+
+
+#usuarioProfessor {
+    align-self: center;
+}
+
+  
+  .th, td {
+    background: white;
+    border: none;
+  }
+  
+  .th, td {
+   
+    text-align: left;
+    padding: 9px
+     10px;
+  }
+  
+ 
+
+  
+  .container {
+    background-color: #dad9d9;
+    padding: 20px;
+  }
+  table {
+    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0 1em; 
+    width: 100%;
+  }
+  #professores{
+    width: 141%;
+  }
+  body{
+    background: #dad9d9;
+  }
+
+.conteiner{
+    display: flex; justify-content: space-between;
+}
