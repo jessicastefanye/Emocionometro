@@ -1,99 +1,102 @@
-const getprofessores = async (textoPesquisa = null) => {
-  let pesquisa = '';
+// Função para obter os dados dos professores da API
+const getProfessores = async (pesquisa) => {
+  try {
+    const response = await fetch('https://emocoes.onrender.com/professores');
+    let data = await response.json();
 
-  if (textoPesquisa) {
-    pesquisa = textoPesquisa;
-  }
-  botaoUsuario.addEventListener('click', function(event) {
-       
-    var botaoUsuario = document.getElementById('btn-usuario');
-    var listaOculta = document.getElementById('opcoes');
-    if (listaOculta.style.display === 'none' || listaOculta.style.display === '') {
-      listaOculta.style.display = 'block';
-    } else {
-      listaOculta.style.display = 'none';
+    // Se uma pesquisa foi fornecida, filtrar os professores
+    if (pesquisa) {
+      data = data.filter(professor => professor.nome.includes(pesquisa));
     }
+
+    return data;
+  } catch (error) {
+    console.log('Erro ao obter os dados dos professores:', error);
+  }
+};
+
+// Função para criar a lista de professores
+const criarListaProfessores = (professores) => {
+  const infoContent1 = document.querySelector('#info-content1');
+  const infoContent2 = document.querySelector('#info-content2');
+  const infoContent3 = document.querySelector('#info-content3');
+  const infoContent4 = document.querySelector('#info-content4');
+  const infoContent5 = document.querySelector('#info-content5');
+
+  infoContent1.innerHTML = '';
+  infoContent2.innerHTML = '';
+  infoContent3.innerHTML = '';
+  infoContent4.innerHTML = '';
+  infoContent5.innerHTML = '';
+
+  professores.forEach((professor) => {
+    infoContent1.innerHTML += `<p class="item-professor" data-id="${professor.id}">${professor.nome}</p>`;
+    infoContent2.innerHTML += `<p class="item-professor" data-id="${professor.id}">${professor.disciplina}</p>`;
+    infoContent4.innerHTML += `<p class="item-professor" data-id="${professor.id}">${professor.perfil}</p>`;
+    if (professor.status) {
+      infoContent5.innerHTML += `
+        <div class="professor-info">
+          <img src="../svg/ativo.svg" style="width: 50px; height: 50px;">
+        </div>
+      `;
+    } else {
+      infoContent5.innerHTML += `
+        <div class="professor-info">
+          <img src="../svg/desatv.svg" style="width: 50px; height: 50px;">
+        </div>
+      `;
+    }
+    
+    
+    
+    infoContent3.innerHTML += `
+    <div class="item-professor" data-id="${professor.id}">
+      <button onclick="editarProfessor(${professor.id})"><img class="botao-imagem" src="../svg/lapis.svg" alt="Editar"></button>
+      <button onclick="deletarProfessor(${professor.id})"><img class="botao-imagem" src="../svg/lixeira.svg" alt="Excluir"></button>
+    </div>
+  
+  
+    `;
   });
-  const response = await fetch(`https://emocoes.onrender.com/Professores?pesquisa=${pesquisa}`);
-  const data = await response.json();
+};
 
-  const info_content1 = document.getElementById('info-content1');
-  const info_content2 = document.getElementById('info-content2');
-  const info_content4 = document.getElementById('info-content4');
-  const info_content5 = document.getElementById('info-content5');
-
-  info_content1.innerHTML = '';
-  info_content2.innerHTML = '';
-  info_content4.innerHTML = '';
-  info_content5.innerHTML = '';
-  // Vai para a página novoProfessor
-
-
-  data.forEach(professor => {
-    info_content1.innerHTML += `
-      <p class="info-white">${professor.nome}</p>
-    `;
-    info_content2.innerHTML += `
-      <p class="info-white">${professor.disciplina || ''}</p>
-    `;
-    info_content4.innerHTML += `
-      <p class="info-white">${professor.perfil || ''}</p>
-    `;
-    info_content5.innerHTML += `
-      <p class="info-white">${professor.ativo || ''}</p>
-    `;
-  });
+// Função para editar professor
+const editarProfessor = (id) => {
+  window.location = `/caminho/para/pagina/de/edicao?id=${id}`;
 }
 
+// Função para deletar professor
+const deletarProfesssor = async (id) => {
+  await fetch(`https://emocoes.onrender.com/professores/${id}`, {
+    method: 'DELETE'
+  });
+  
+  // Remover a linha do professor do DOM
+  const linhaProfessor = document.querySelector(`.item-professor[data-id="${id}"]`);
+  if (linhaProfessor) {
+    linhaProfessor.remove();
+  }
+}
 
+// Função principal para carregar a lista de professores
+const carregarListaProfessores = async () => {
+  const professores = await getProfessores();
+  criarListaProfessores(professores);
+};
+
+// Chamar a função principal para carregar a lista de professores
+carregarListaProfessores();
 
 const search = document.getElementById('search');
 search.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {
     const pesquisa = search.value;
-    getprofessores(pesquisa);
+    getProfessores(pesquisa); // Alterado para 'getProfessores'
   }
 });
 
 const lupa = document.getElementById('lupa');
 lupa.addEventListener("click", (e) => {
   const pesquisa = search.value;
-  getprofessores(pesquisa);
+  getProfessores(pesquisa); // Alterado para 'getProfessores'
 });
-const novoProfessor = () => {
-  window.location = "../html/professores/addProf.html";
-  
-}
-
-
-// Vai para a página editarProfessor
-const editarProfessor = (id) => {
-  window.location = `/Projeto/Emocionometro/html/addprof.html?id=${id}`;
-}
-
-const deletarProfesssor = async (id) => {
-  await fetch(`https://emocoes.onrender.com/Professores/${id}`, {
-    method: 'DELETE'
-  });
-  getprofessores();
-}
-
-// Vai para a página mentorias
-const mentorias = () => {
-  window.location = "/html/mentorias/mentorias.html";
-}
-
-// Vai para a página turmas
-const turmas = () => {
-  window.location = "/html/turmas/turmas.html";
-}
-
-// Vai para a página alunos
-const alunos = () => {
-  window.location = "/html/alunos/alunos.html";
-}
-
-// Retorna para a página novoMentor
-const novoMentor = () => {
-  window.location = "/html/professores/novoMentor.html";
-}

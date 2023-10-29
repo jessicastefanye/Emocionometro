@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ativo: ativo,
     };
 
-    fetch("https://emocoes.onrender.com/Professores", {
+    fetch("https://emocoes.onrender.com/professores", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -615,4 +615,30 @@ h4,.main-content{
 .info-container p {
    color:black ;
 }
+.professores-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+}
+
+.professores-lista li {
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.professor-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .botao-imagem {
+    width: 20px;
+    height: 20px;
+  }
+  
 
