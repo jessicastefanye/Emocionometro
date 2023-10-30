@@ -14,7 +14,6 @@
   <script defer src="../scripts/prof.js"></script>
   <link rel="stylesheet" href="../styles/prof.css" />
 </head>
-
 <body>
   <div class="parte-superior">
     <img class="imagem1" src="../img/login2.png" alt="img" />
@@ -29,7 +28,7 @@
     <img class="linha" src="../svg/linha5.svg" alt="" />
   </div>
 
-  <div class="box-content">
+  <div class="box-content flex-end">
     <div class="boxLateral">
       <div>
         <button id="Professores" class="btnstatic dflex">
@@ -68,17 +67,20 @@
         </button>
       </div>
     </div>
-   <div class="container" >
+    <div class="frase">
+      <h1>Usuários > Professor</h1>
+    </div>
+    <div class="a">
       <a href="../html/addprof.html">
         <button id="botaoUsuario" type="button">
           <img src="../img/Plus 24px.png" alt="">
           <strong>Novo Professor</strong>
-        </button></a>
-    <div class="box-silver">
-      <h4>Usuários > Professor</h4>
-       
-   
-        
+        </button>
+      </a>
+    </div>
+
+    <div class="container">
+      <div class="box-silver">
         <table id="professores">
           <thead>
             <tr>
@@ -86,22 +88,17 @@
               <th>Disciplina</th>
               <th>Perfil</th>
               <th>Ativo</th>
-             <th>ações</th>
+              <th>ações</th>
             </tr>
           </thead>
           <tbody id="corpoTabela">
             <!-- Os professores serão inseridos aqui pelo JavaScript -->
           </tbody>
         </table>
-        
-      
-      
-    
-    
-    
+      </div>
     </div>
   </div>
-</div>
 </body>
+
 
 </html>
