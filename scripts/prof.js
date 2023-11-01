@@ -38,6 +38,11 @@ getProfessores().then(data => {
     editar.style.cursor = 'pointer'; // Faz o ícone de edição parecer selecionável
     editar.addEventListener('click', () => editarProfessor(professor.id));
     acoes.appendChild(editar);
+    const editarProfessor = (id) => {
+      console.log('Editar professor com ID:', id);
+      // Redirecionar para a página de edição com o ID do professor
+      window.location.href = `../html/editarprof.html=${id}`;
+    };
 
     const excluir = document.createElement('img');
     excluir.src = '../svg/lixeira.svg';
@@ -50,79 +55,62 @@ getProfessores().then(data => {
   });
 });
 
-function editarProfessor(id) {
-  // Implemente a lógica para editar o professor aqui
-}
+
 
 function excluirProfessor(id) {
-  // Implemente a lógica para excluir o professor aqui
+  async function excluirProfessor(id) {
+    // Enviar uma requisição DELETE para a API para excluir o professor
+    const response = await fetch(`https://emocoes.onrender.com/professores/${id}`, {
+      method: 'DELETE',
+    });
+  
+    if (!response.ok) {
+      throw new Error(`Erro ao excluir o professor: ${response.statusText}`);
+    }
+  
+    // Recarregar os dados após a exclusão
+    getprofessor();
+  }
+  
 }
 
+var botaoUsuario = document.getElementById('btn-usuario');
+var listaOculta = document.getElementById('opcoes');
 
-    // if (professor.status) {
-    //   infoContent5.innerHTML += `
-    //     <div class="professor-info">
-    //       <img src="../svg/ativo.svg" style="width: 50px; height: 50px;">
-    //     </div>
-    //   `;
-    // } else {
-    //   infoContent5.innerHTML += `
-    //     <div class="professor-info">
-    //       <img src="../svg/desatv.svg" style="width: 50px; height: 50px;">
-    //     </div>
-    //   `;
-    // }
-    
-    
-    
-//     infoContent3.innerHTML += `
-//     <div class="item-professor" data-id="${professor.id}">
-//       <button onclick="editarProfessor(${professor.id})"><img class="botao-imagem" src="../svg/lapis.svg" alt="Editar"></button>
-//       <button onclick="deletarProfessor(${professor.id})"><img class="botao-imagem" src="../svg/lixeira.svg" alt="Excluir"></button>
-//     </div>
+botaoUsuario.addEventListener('click', function(event) {
+   
   
+  if (listaOculta.style.display === 'none' || listaOculta.style.display === '') {
+    listaOculta.style.display = 'block';
+  } else {
+    listaOculta.style.display = 'none';
+  }
+});
+
+function retirecionarinicio() {
   
-//     `;
-//   });
-// };
+  window.location.href = "../html/inicio.html";
+}
+function redirecionarParaEmocionometro() {
+    // Redirecione para a página do Emocionômetro
+    window.location.href = "../html/emocio.html";
+  }
 
-// Função para editar professor
-// const editarProfessor = (id) => {
-//   window.location = `/caminho/para/pagina/de/edicao?id=${id}`;
-// }
+ 
 
-// // Função para deletar professor
-// const deletarProfesssor = async (id) => {
-//   await fetch(`https://emocoes.onrender.com/professores/${id}`, {
-//     method: 'DELETE'
-//   });
-  
-//   // Remover a linha do professor do DOM
-//   const linhaProfessor = document.querySelector(`.item-professor[data-id="${id}"]`);
-//   if (linhaProfessor) {
-//     linhaProfessor.remove();
-//   }
-// }
+  function redirecionarParaSair() {
+    // Redirecione para a página de sair (ou faça alguma ação de logout)
+    window.location.href = "../index.html";
+  }
 
-// Função principal para carregar a lista de professores
-// const carregarListaProfessores = async () => {
-//   const professores = await getProfessores();
-//   criarListaProfessores(professores);
-// };
+function redirecionarParaEmocionometro() {
+    // Redirecione para a página do Emocionômetro
+    window.location.href = "../html/emocio.html";
+  }
 
-// // Chamar a função principal para carregar a lista de professores
-// carregarListaProfessores();
+ 
 
-// const search = document.getElementById('search');
-// search.addEventListener('keyup', (e) => {
-//   if (e.key === 'Enter') {
-//     const pesquisa = search.value;
-//     getProfessores(pesquisa); // Alterado para 'getProfessores'
-//   }
-// });
-
-// const lupa = document.getElementById('lupa');
-// lupa.addEventListener("click", (e) => {
-//   const pesquisa = search.value;
-//   getProfessores(pesquisa); // Alterado para 'getProfessores'
-// });
+  function redirecionarParaSair() {
+    // Redirecione para a página de sair (ou faça alguma ação de logout)
+    window.location.href = "../index.html";
+  }

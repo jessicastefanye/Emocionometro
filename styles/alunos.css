@@ -114,8 +114,8 @@ btnVerde {
 
 .input-search {
     font-size: 16px;
-    width: 297px;
-    height: 52px;
+    width: 400px;
+    height: 56px;
     border-radius: 16px;
     padding-left: 16px;
     border: 1.5px solid #E0E0E0;
@@ -232,7 +232,7 @@ menu {
 
 .box-content {
     display: flex;
-    background: #ebe8e8;
+    background: #dad9d9;
 
 }
 
@@ -252,38 +252,36 @@ menu {
 
 .opcoes {
     display: none;
+    position: absolute;
     top: 100%;
     left: 0;
-    background-color:  #F48221;
-    ;
-    background: #F9E423;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
     padding: 10px;
 }
 
 .botao:hover .opcoes {
     display: block;
-    background-color: #F48221;
-
 }
 
 .opcoes ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-  
 }
 
 .opcoes li {
     padding: 10px 0;
-   
-    
+    border-bottom: 1px solid #ccc;
 }
 
-
+.opcoes li:last-child {
+    border-bottom: none;
+}
 
 .opcoes a {
     text-decoration: none;
-    
+    color: #333;
 }
 
 */ .opcoes a:hover {
@@ -524,8 +522,8 @@ menu {
 
 .input-search {
     font-size: 16px;
-    width: 290px;
-    height: 52px;
+    width: 400px;
+    height: 56px;
     border-radius: 16px;
     padding-left: 16px;
     border: 1.5px solid #E0E0E0;
@@ -560,6 +558,16 @@ menu {
     height: 20px;
 }
 
+.input-search {
+    font-size: 16px;
+    width: 400px;
+    height: 56px;
+    border-radius: 16px;
+    padding-left: 16px;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 16px;
+
+}
 
 .search-lupa img {
     position: absolute;
@@ -624,13 +632,12 @@ table {
 }
 
 #professores {
-    width: 65%;
-    margin-left: 378px;
-    margin-top: -390px;
-    height: 3px;
+    width: 146%;
+    margin-left: -768px;
+    margin-top: 100px;
 }
 body {
-    background: #f1f1f1;
+    background: #dad9d9;
 }
 
 .conteiner {
@@ -655,10 +662,7 @@ h1{
     margin-top: 78px;
 }
 th {
-    text-align: justify;
-    width: 126px;
-    background: #ebe8e8;
-    
+    background-color: #f0f0f0;
   }
   
   tr:nth-child(even) {
@@ -667,16 +671,4 @@ th {
   
   tr:nth-child(odd) {
     background-color: #ffffff;
-  }
-  .search-lupa{
-    margin-top: 63px;
-    width: 10px;
-    height: 10px;
-    margin-left: -1064px;
-  }
-  #lupa{
-    margin-left: -72px;
-    margin-top: -63px;
-    height: 35px;
-    width: 31px;
   }

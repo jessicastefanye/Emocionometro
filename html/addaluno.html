@@ -2,7 +2,7 @@
 <html lang="pt-br">
 
 <head>
-  <title>Novo Professor</title>
+  <title>Novo usuario  Aluno</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -12,8 +12,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
     rel="stylesheet" />
 
-  <script defer src="../scripts/editarProf.js"></script>
-  <link rel="stylesheet" href="../styles/editarProf.css" />
+  <script defer src="../scripts/addaluno.js"></script>
+  <link rel="stylesheet" href="../styles/addaluno.css" />
 </head>
 
 <body>
@@ -33,26 +33,23 @@
   <div class="box-content">
     <div class="boxLateral">
       <div>
-        <button onclick="retirecionarinicio()" id="inicio" class="btn-menu dflex">
-            <img src="../svg/inicio.svg" alt="" />
-            <p>Inicio</p>
-          </button>
-        <button id="btn-usuario" class="btn-menu dflex">
+        <button id="Professores" class="btnstatic dflex">
+          <img src="../svg/inicio.svg" alt="" />
+          <p>Inicio</p>
+        </button>
+        <button class="btn-menu dflex">
           <img src="../svg/usuario.svg" alt="" />
           <p>Usuarios</p>
-        </button>
-        <div class="botao" id="botao">
-          <div class="opcoes" id="opcoes">
-            <ul id="lista-oculta">
-              <li>
-                <a class="btn-menu dflex" href="../html/prof.html">Professor</a>
-              </li>
-              <li><a class="btn-menu dflex" href="../html/aluno.html">Aluno</a></li>
-            </ul>
+          <div class="botao" id="botao">
+            <div class="opcoes" id="opcoes">
+              <ul id="lista-oculta">
+                <li><a class="btn-menu dflex" href="pagina1.html">Professor</a></li>
+                <li><a class="btn-menu dflex" href="pagina2.html">Aluno</a></li>
+              </ul>
+            </div>
           </div>
-        </div>
         </button>
-        <button onclick="direcionar()" class="btn-menu dflex">
+        <button onclick="direcionar()()" class="btn-menu dflex">
           <img src="../svg/coraçao.svg" alt="" />
           <p>Emocionometro</p>
         </button>
@@ -71,7 +68,7 @@
 
     <div id="voltar" class="BT-H4 dflex">
       <button class="btn-voltar" onclick="Professores()"><img src="../svg/voltar.svg" alt=""></button>
-      <h4>Editar Professor</h4>
+      <h4>Novo Usuario > Professor</h4>
 
       <div>
         <div id="formContainer" class="for">
@@ -83,18 +80,13 @@
               </div>
               <input type="text" id="nome" name="nome">
 
-              <label for="Perfil">Perfil</label>
+              <label for="Perfil">Turma</label>
               <select id="Perfil" name="Perfil">
                 <option value="Professor">Professor</option>
                 <option value="aluno">Aluno</option>
                 <option value="aluno">Diretor</option>
               </select>
-              <label for="Disciplina">Disciplina:</label>
-              <select id="Disciplina" name="Disciplina">
-                <option value="Poções">Poções </option>
-                <option value="Defesa">Defesa </option>
-                <option value="Transfiguração">Transfiguração</option>
-
+             
               </select>
               <label for="ativo">Ativo</label>
               <label class="toggle">

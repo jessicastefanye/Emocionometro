@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Editar  Aluno</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <script defer src="../scripts/editaraluno.js"></script>
+  <link rel="stylesheet" href="../styles/editaraluno.css" />
+</head>
+
+<body>
+    <div class="parte-superior">
+        <img class="imagem1" src="../img/login2.png" alt="img" />
+        <img class="pessoa" src="../svg/pessoa.svg" alt="pessoa" /> Jessica Stefanye
+      </div>
+      <div class="linhas">
+        <img class="linha" src="../svg/linha.svg" alt="" />
+        <img class="linha" src="../svg/linha2.svg" alt="" />
+        <img class="linha" src="../svg/linha3.svg" alt="" />
+        <img class="linha" src="../svg/linha4.svg" alt="" />
+        <img class="linha" src="../svg/linha5.svg" alt="" />
+      </div>
+    
+      <div class="box-content">
+        <div class="boxLateral">
+          <div>
+            <button id="Professores" class="btnstatic dflex" onclick="redirectToPage('pagina1.html')">
+              <img src="../svg/inicio.svg" alt="" />
+              <p>Inicio</p>
+            </button>
+            <button class="btn-menu dflex">
+              <img src="../svg/usuario.svg" alt="" />
+              <p>Usuarios</p>
+              <div class="botao" id="botao">
+                <div class="opcoes" id="opcoes">
+                  <ul id="lista-oculta">
+                    <li><a class="btn-menu dflex" onclick="toggleSubMenu()">Professor</a></li>
+                    <li><a class="btn-menu dflex" onclick="redirectToPage('pagina2.html')">Aluno</a></li>
+                  </ul>
+                </div>
+              </div>
+            </button>
+            <button onclick="redirectToPage('pagina3.html')" class="btn-menu dflex">
+              <img src="../svg/coraçao.svg" alt="" />
+              <p>Emocionometro</p>
+            </button>
+          </div>
+          <div>
+            <button onclick="redirectToPage('pagina4.html')" class="btn-menu dflex">
+              <img src="../svg/Perfil.svg" alt="" />
+              <p>Meu Perfil</p>
+            </button>
+            <button onclick="redirectToPage('pagina5.html')" class="btn-menu dflex">
+              <img src="../svg/sair.svg" alt="" />
+              <p>Sair</p>
+            </button>
+          </div>
+        </div>
+    
+        <div id="voltar" class="BT-H4 dflex">
+          <button class="btn-voltar" onclick="redirectToPage('pagina1.html')">
+            <img src="../svg/voltar.svg" alt="">
+          </button>
+          <h4>Dados do Usuario</h4>
+    
+          <div>
+            <div id="formContainer" class="for">
+              <main class="main-content">
+                <form id="formulario">
+                  <h2>Dados do usuário</h2>
+                  <div class="dados">
+                    <label for="nome">Nome</label>
+                  </div>
+                  <input type="text" id="nome" name="nome">
+    
+                  <label for="Perfil">Turma</label>
+                  <select id="Perfil" name="Perfil">
+                    <option value="Professor">Professor</option>
+                    <option value="Aluno">Aluno</option>
+                    <option value="Diretor">Diretor</option>
+                  </select>
+                 
+                  <label for="ativo">Ativo</label>
+                  <label class="toggle">
+                    <input type="checkbox" id="toggle-button">
+                    <span class="slider"></span>
+                  </label>
+            </div>
+            <button type="submit" id="salvar">Salvar</button>
+            </form>
+            </main>
+          </div>
+        </div>
+      </div>
+</body>
+
+</html>

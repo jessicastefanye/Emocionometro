@@ -28,47 +28,47 @@
     <img class="linha" src="../svg/linha5.svg" alt="" />
   </div>
 
-  <div class="box-content flex-end">
+  <div class="box-content">
     <div class="boxLateral">
       <div>
-        <button id="Professores" class="btnstatic dflex">
-          <img src="../svg/inicio.svg" alt="" />
-          <p>Inicio</p>
-        </button>
-        <button class="btn-menu dflex">
+        <button onclick="retirecionarinicio()" id="inicio" class="btn-menu dflex">
+            <img src="../svg/inicio.svg" alt="" />
+            <p>Inicio</p>
+          </button>
+        <button id="btn-usuario" class="btn-menu dflex">
           <img src="../svg/usuario.svg" alt="" />
           <p>Usuarios</p>
-          <div class="botao" id="botao">
-            <div class="opcoes" id="opcoes">
-              <ul id="lista-oculta">
-                <li>
-                  <a class="btn-menu dflex" href="pagina1.html">Professor</a>
-                </li>
-                <li>
-                  <a class="btn-menu dflex" href="pagina2.html">Aluno</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </button>
-        <button onclick="direcionar()" class="btn-menu dflex">
+        <div class="botao" id="botao">
+          <div class="opcoes" id="opcoes">
+            <ul id="lista-oculta">
+              <li>
+                <a class="btn-menu dflex" href="../html/prof.html">Professor</a>
+              </li>
+              <li><a class="btn-menu dflex" href="../html/aluno.html">Aluno</a></li>
+            </ul>
+          </div>
+        </div>
+        </button>
+        <button onclick="redirecionarParaEmocionometro()" class="btn-menu dflex">
           <img src="../svg/coraçao.svg" alt="" />
           <p>Emocionometro</p>
         </button>
       </div>
       <div>
-        <button onclick="direcionar()" class="btn-menu dflex">
+        <button onclick="" class="btn-menu dflex">
           <img src="../svg/Perfil.svg" alt="" />
           <p>Meu Perfil</p>
         </button>
-        <button onclick="direcionar()" class="btn-menu dflex">
+        <button onclick="redirecionarParaSair()" class="btn-menu dflex">
           <img src="../svg/sair.svg" alt="" />
           <p>Sair</p>
         </button>
       </div>
     </div>
+   
     <div class="frase">
-      <h1>Usuários > Professor</h1>
+      <h1>Usuários > Professores</h1>
     </div>
     <div class="a">
       <a href="../html/addprof.html">
@@ -78,10 +78,15 @@
         </button>
       </a>
     </div>
+    <div class="search-lupa">
+      <input class="input-search" type="search" name="search" id="search"
+          placeholder="Pesquise uma palavra-chave">
+      <img src="../svg/lupa.svg" alt="lupa" id="lupa" >
+  </div>
 
-    <div class="container">
-      <div class="box-silver">
+  </div>
         <table id="professores">
+
           <thead>
             <tr>
               <th>Nome</th>
@@ -96,8 +101,7 @@
           </tbody>
         </table>
       </div>
-    </div>
-  </div>
+    
 </body>
 
 

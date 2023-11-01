@@ -86,15 +86,7 @@ btnVerde {
     justify-content: space-between;
 
 }
-/* 
-.boxLateral {
-      display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 274px;
-    background: #F9E423;
-    height: 100vh;
-} */
+
 
 .dflex {
     display: flex;
@@ -117,16 +109,6 @@ btnVerde {
     height: 100vh;
 }
 
-/* .dflex {
-    display: flex;
-}
-.center-text {
-    text-align: center;
-}
-.info-white :nth-child(1) {
-    margin-right: 10px;
-
-} */
 
 
 

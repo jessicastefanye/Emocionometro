@@ -1,4 +1,4 @@
-
+sdocument.addEventListener("DOMContentLoaded", function () {
     document.getElementById("salvar").addEventListener("click", function (event) {
       event.preventDefault(); // Evita o envio padrão do formulário
   
@@ -35,8 +35,22 @@
         });
     });
   
-    
-   
+    //funções menu/nagar
+    const Professores = () => {
+      window.location = "./Professores.html";
+    };
+    //vai para pagina mentoias
+    const mentorias = () => {
+      window.location = "../mentorias/mentorias.html";
+    };
+    //vai para pagina turmas
+    const turmas = () => {
+      window.location = "/html/turmas/turmas.html";
+    };
+    //vai para pagina alunos
+    const alunos = () => {
+      window.location = "/html/alunos/alunos.html";
+    };
     const toggleButton = document.getElementById("toggle-button");
   
     toggleButton.addEventListener("change", function () {
@@ -46,32 +60,5 @@
         toggleButton.parentNode.classList.remove("active");
       }
     });
+  });
   
-    var botaoUsuario = document.getElementById('btn-usuario');
-    var listaOculta = document.getElementById('opcoes');
-
-    botaoUsuario.addEventListener('click', function(event) {
-       
-      
-      if (listaOculta.style.display === 'none' || listaOculta.style.display === '') {
-        listaOculta.style.display = 'block';
-      } else {
-        listaOculta.style.display = 'none';
-      }
-    });
-  
-    function retirecionarinicio() {
-      
-      window.location.href = "../html/inicio.html";
-    }
-    function redirecionarParaEmocionometro() {
-        // Redirecione para a página do Emocionômetro
-        window.location.href = "../html/emocio.html";
-      }
-    
-     
-    
-      function redirecionarParaSair() {
-        // Redirecione para a página de sair (ou faça alguma ação de logout)
-        window.location.href = "../index.html";
-      }

@@ -11,18 +11,31 @@
         listaOculta.style.display = 'none';
       }
     });
-  
+    
+    function retirecionarinicio() {
+      
+      window.location.href = "../html/inicio.html";
+    }
     function redirecionarParaEmocionometro() {
         // Redirecione para a página do Emocionômetro
-        window.location.href = "file:///C:/Users/Jessi/OneDrive/%C3%81rea%20de%20Trabalho/Projeto/Emocionometro/html/emocio.html";
+        window.location.href = "../html/emocio.html";
       }
     
-      function redirecionarParaPerfil() {
-        // Redirecione para a página do Perfil
-        window.location.href = "pagina_perfil.html";
-      }
+     
     
       function redirecionarParaSair() {
         // Redirecione para a página de sair (ou faça alguma ação de logout)
-        window.location.href = "https://direcionar().vercel.app/";
+        window.location.href = "../index.html";
+      }
+  
+    function redirecionarParaEmocionometro() {
+        // Redirecione para a página do Emocionômetro
+        window.location.href = "../html/emocio.html";
+      }
+    
+     
+    
+      function redirecionarParaSair() {
+        // Redirecione para a página de sair (ou faça alguma ação de logout)
+        window.location.href = "../index.html";
       }

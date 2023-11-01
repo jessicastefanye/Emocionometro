@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Alunos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Sora:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <script defer src="../scripts/alunos.js"></script>
+  <link rel="stylesheet" href="../styles/alunos.css" />
+</head>
+<body>
+  <div class="parte-superior">
+    <img class="imagem1" src="../img/login2.png" alt="img" />
+    <img class="pessoa" src="../svg/pessoa.svg" alt="pessoa" />Maria
+  </div>
+  <div class="linhas">
+    <img class="linha" src="../svg/linha.svg" alt="" />
+    <img class="linha" src="../svg/linha2.svg" alt="" />
+    <img class="linha" src="../svg/linha3.svg" alt="" />
+    <img class="linha" src="../svg/linha4.svg" alt="" />
+    <img class="linha" src="../svg/linha5.svg" alt="" />
+  </div>
+
+  <div class="box-content flex-end">
+    <div class="boxLateral">
+      <div>
+        <button id="Professores" class="btnstatic dflex">
+          <img src="../svg/inicio.svg" alt="" />
+          <p>Inicio</p>
+        </button>
+        <button class="btn-menu dflex">
+          <img src="../svg/usuario.svg" alt="" />
+          <p>Usuarios</p>
+          <div class="botao" id="botao">
+            <div class="opcoes" id="opcoes">
+              <ul id="lista-oculta">
+                <li>
+                  <a class="btn-menu dflex" href="pagina1.html">Professor</a>
+                </li>
+                <li>
+                  <a class="btn-menu dflex" href="pagina2.html">Aluno</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </button>
+        <button onclick="direcionar()" class="btn-menu dflex">
+          <img src="../svg/coraçao.svg" alt="" />
+          <p>Emocionometro</p>
+        </button>
+      </div>
+      <div>
+        <button onclick="direcionar()" class="btn-menu dflex">
+          <img src="../svg/Perfil.svg" alt="" />
+          <p>Meu Perfil</p>
+        </button>
+        <button onclick="direcionar()" class="btn-menu dflex">
+          <img src="../svg/sair.svg" alt="" />
+          <p>Sair</p>
+        </button>
+      </div>
+    </div>
+    <div class="frase">
+      <h1>Usuários > Alunos</h1>
+    </div>
+    <div class="a">
+      <a href="../html/addprof.html">
+        <button id="botaoUsuario" type="button">
+          <img src="../img/Plus 24px.png" alt="">
+          <strong>Novo Professor</strong>
+        </button>
+      </a>
+    </div>
+
+    <div class="container">
+      <div class="box-silver">
+        <table id="professores">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Turma</th>
+              <th>Ativo</th>
+              <th>ações</th>
+            </tr>
+          </thead>
+          <tbody id="corpoTabela">
+            <!-- Os professores serão inseridos aqui pelo JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>''

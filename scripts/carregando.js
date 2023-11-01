@@ -4,5 +4,5 @@
   // Use a função setTimeout para redirecionar após o tempo especificado
   setTimeout(function() {
       // Altere a URL para a qual deseja redirecionar
-      window.location.href = '';
+      window.location.href = '../html/inicio.html';
   }, tempoParaRedirecionar);
