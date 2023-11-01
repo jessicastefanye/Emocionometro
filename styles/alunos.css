@@ -252,36 +252,38 @@ menu {
 
 .opcoes {
     display: none;
-    position: absolute;
     top: 100%;
     left: 0;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    background-color:  #F48221;
+    ;
+    background: #F9E423;
     padding: 10px;
 }
 
 .botao:hover .opcoes {
     display: block;
+    background-color: #F48221;
+
 }
 
 .opcoes ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+  
 }
 
 .opcoes li {
     padding: 10px 0;
-    border-bottom: 1px solid #ccc;
+   
+    
 }
 
-.opcoes li:last-child {
-    border-bottom: none;
-}
+
 
 .opcoes a {
     text-decoration: none;
-    color: #333;
+    
 }
 
 */ .opcoes a:hover {
@@ -392,6 +394,7 @@ input {
 .dflex {
     display: flex;
 }
+
 
 .cinza50 {
     background-color: #fafafa;
@@ -532,12 +535,6 @@ menu {
 }
 
 
-.search-lupa img {
-    position: absolute;
-    top: 208px;
-    left: 628px;
-
-}
 
 
 .info-container {
@@ -562,6 +559,17 @@ menu {
     font-size: 16px;
     width: 400px;
     height: 56px;
+    border-radius: 16px;
+    padding-left: 16px;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 16px;
+
+}
+
+.input-search {
+    font-size: 16px;
+    width: 297px;
+    height: 52px;
     border-radius: 16px;
     padding-left: 16px;
     border: 1.5px solid #E0E0E0;
@@ -607,13 +615,11 @@ menu {
     align-self: center;
 }
 
-
-.th,
-td {
+.th, td {
     background: white;
-    border: none;
-    padding: 8px;
-    text-align: left;;
+    /* border: none; */
+    /* padding: 8px; */
+    text-align: -webkit-center;
 }
 
 
@@ -632,9 +638,10 @@ table {
 }
 
 #professores {
-    width: 146%;
-    margin-left: -768px;
-    margin-top: 100px;
+    width: 65%;
+    margin-left: 378px;
+    margin-top: -390px;
+    height: 3px;
 }
 body {
     background: #dad9d9;
@@ -662,7 +669,12 @@ h1{
     margin-top: 78px;
 }
 th {
-    background-color: #f0f0f0;
+    height: 28px;
+    text-align: revert;
+    width: 195px;
+    background: #dad9d9;
+    
+    
   }
   
   tr:nth-child(even) {
@@ -672,3 +684,67 @@ th {
   tr:nth-child(odd) {
     background-color: #ffffff;
   }
+  tr{
+    width: 100px;
+  }
+  .input-search {
+    font-size: 16px;
+    width: 290px;
+    height: 52px;
+    border-radius: 16px;
+    padding-left: 16px;
+    border: 1.5px solid #E0E0E0;
+    border-radius: 16px;
+}
+.box-content, input,table {
+    font-family: 'Poppins', sans-serif;
+}
+#lupa {
+    margin-left: -72px;
+    margin-top: -63px;
+    height: 35px;
+    width: 31px;
+}
+.search-lupa img {
+    position: absolute;
+    top: 208px;
+    left: 628px;
+    height: 35px;
+    width: 34px;
+}
+#botaoUsuario {
+    position: relative;
+    /* margin: auto; */
+    font-size: 16px;
+    background: #00C247;
+    width: 271px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    margin-left: 352px;
+    left: 442px;
+    top: -446px;
+}
+.frase {
+    left: 270px;
+    margin: 124px;
+    top: -400px;
+    position: relative;
+    font-size: 13px;
+    margin-top: -80px;
+    margin-left: 12px;
+    height: 0;
+}
+.input-search {
+    left: 295px;
+    top: -592px;
+    position: relative;
+    font-size: 16px;
+    width: 298px;
+    height: 52px;
+    border-radius: 16px;
+    /* padding-left: 16px; */
+    border: 1.5px solid #E0E0E0;
+    border-radius: 16px;
+}

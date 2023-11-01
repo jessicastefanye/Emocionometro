@@ -16,45 +16,47 @@ const getProfessores = async (pesquisa) => {
 };
 
 getProfessores().then(data => {
-  const tabela = document.getElementById('corpoTabela');
+  const tabela = document.getElementById('professores'); // Use o ID da tabela
+  const corpoTabela = document.getElementById('corpoTabela');
+
   data.forEach(professor => {
     const linha = document.createElement('tr');
 
-    ['nome', 'disciplina', 'perfil'].forEach(chave => {
-      const celula = document.createElement('td');
-      celula.textContent = professor[chave];
-      linha.appendChild(celula);
-    });
-    const ativo = document.createElement('td');
+    const colunaNome = document.createElement('td');
+    colunaNome.textContent = professor.nome;
+    linha.appendChild(colunaNome);
+
+    const colunaDisciplina = document.createElement('td');
+    colunaDisciplina.textContent = professor.disciplina;
+    linha.appendChild(colunaDisciplina);
+
+    const colunaPerfil = document.createElement('td');
+    colunaPerfil.textContent = professor.perfil;
+    linha.appendChild(colunaPerfil);
+
+    const colunaAtivo = document.createElement('td');
     const imagemAtivo = document.createElement('img');
     imagemAtivo.src = professor.status ? '../svg/ativo.svg' : '../svg/desatv.svg';
-    ativo.appendChild(imagemAtivo);
-    linha.appendChild(ativo);
+    colunaAtivo.appendChild(imagemAtivo);
+    linha.appendChild(colunaAtivo);
 
-    const acoes = document.createElement('td');
-
+    const colunaAcoes = document.createElement('td');
     const editar = document.createElement('img');
-    editar.src ='../svg/lapis.svg';
+    editar.src = '../svg/lapis.svg';
     editar.style.cursor = 'pointer'; // Faz o ícone de edição parecer selecionável
     editar.addEventListener('click', () => editarProfessor(professor.id));
-    acoes.appendChild(editar);
-    const editarProfessor = (id) => {
-      console.log('Editar professor com ID:', id);
-      // Redirecionar para a página de edição com o ID do professor
-      window.location.href = `../html/editarprof.html=${id}`;
-    };
+    colunaAcoes.appendChild(editar);
 
     const excluir = document.createElement('img');
     excluir.src = '../svg/lixeira.svg';
     excluir.style.cursor = 'pointer'; // Faz o ícone de exclusão parecer selecionável
     excluir.addEventListener('click', () => excluirProfessor(professor.id));
-    acoes.appendChild(excluir);
+    colunaAcoes.appendChild(excluir);
 
-    linha.appendChild(acoes);
-    tabela.appendChild(linha);
+    linha.appendChild(colunaAcoes);
+    corpoTabela.appendChild(linha);
   });
 });
-
 
 
 function excluirProfessor(id) {
