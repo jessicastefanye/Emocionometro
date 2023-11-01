@@ -59,23 +59,25 @@ getProfessores().then(data => {
 });
 
 
-function excluirProfessor(id) {
-  async function excluirProfessor(id) {
-    // Enviar uma requisição DELETE para a API para excluir o professor
-    const response = await fetch(`https://emocoes.onrender.com/professores/${id}`, {
+const excluirProfessor = async (id) => {
+  try {
+    // Enviar uma solicitação DELETE para excluir o aluno da API
+    const response = await fetch(`https://emocoes.onrender.com/alunos${id}`, {
       method: 'DELETE',
     });
-  
-    if (!response.ok) {
-      throw new Error(`Erro ao excluir o professor: ${response.statusText}`);
-    }
-  
-    // Recarregar os dados após a exclusão
-    getprofessor();
-  }
-  
-}
 
+    if (response.status === 200) {
+      // Remover a linha da tabela se a exclusão for bem-sucedida
+      const tabela = document.getElementById('corpoTabela');
+      const linha = document.getElementById(`linha-${id}`);
+      tabela.removeChild(linha);
+    } else {
+      console.log('Erro ao excluir o professor');
+    }
+  } catch (error) {
+    console.log('Erro ao excluir o professor:', error);
+  }
+};
 var botaoUsuario = document.getElementById('btn-usuario');
 var listaOculta = document.getElementById('opcoes');
 
